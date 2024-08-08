@@ -1,4 +1,11 @@
 <?php
+require_once dirname(dirname(__DIR__)) . '/vendor/autoload.php';
+use Dotenv\Dotenv;
+
+// Initialize dotenv
+$dotenv = Dotenv::createImmutable(dirname(dirname(__DIR__)));
+$dotenv->load();
+
 include 'phpqrcode/qrlib.php';
 date_default_timezone_set('Asia/Kolkata');
 // if(session_status() == PHP_SESSION_NONE){
@@ -6,7 +13,16 @@ session_start();
 // }
 // if(defined('THEME_PATH'))
 // session_start();
-$config['environment'] = 'development';
+
+function env($type,$default=''){
+    if(isset($_ENV[$type])){
+        return $_ENV[$type];
+    }else{
+        return $default;
+    }
+}
+
+$config['environment'] = env('ENVIRONMENT','development');
     
 switch($config['environment']){
     case 'production':
@@ -24,11 +40,13 @@ switch($config['environment']){
 // define('THEME_PATH', BASE_URL . 'theme/');
 define('ENROLLMENT_NO','RJ/S/'.date('Y').'00');
 
-define('APPPATH', $_SERVER['DOCUMENT_ROOT']);
-define('BASE_URL', 'https://rjdigitalcomputer.com/');
+define('APPPATH', env('APPPATH',$_SERVER['DOCUMENT_ROOT']));
+define('BASE_URL', env('BASE_URL','https://rjdigitall.webfire.site/'));
 define('THEME_PATH', BASE_URL . 'theme/');
 
-$con = mysqli_connect("localhost", "webfire", "k6vl4tD10hNxIqN", "rjdigitall_final");
+$con = mysqli_connect(env('DB_HOST','localhost'), env('DB_USER','webfire'), 
+env('DB_PASS',"k6vl4tD10hNxIqN"), env('DB_NAME',"rjdigitall_final"));
+
 
 
 require APPPATH . '/config/config.php';
