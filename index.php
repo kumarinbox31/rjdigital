@@ -201,7 +201,7 @@ while($stu = $students->fetch_assoc()){
                                           <p><span style="background-color: yellow;"> </span></p>
                                           <h3><span style="background-color: rgb(0, 0, 255);"><span style="font-family: &quot;Comic Sans MS&quot;;"><span style="font-size: large;">New Admission Open&nbsp; DCA, ADCA, CCC, ACCOUNTING, TALLY9, ERP-9.</span></span></span></h3>
                                           <p></p>
-                                          <h3><span style="background-color: rgb(0, 0, 255);"><span style="font-family: &quot;Comic Sans MS&quot;;"><span style="font-size: large;">Join Today Digital Computer institute</span></span></span></h3>
+                                          <h3><span style="background-color: rgb(0, 0, 255);"><span style="font-family: &quot;Comic Sans MS&quot;;"><span style="font-size: large;">Join Today RJ Digital Computer Institute Neori</span></span></span></h3>
                                           <p></p>
                                           <p></p>
                                           <p></p>
