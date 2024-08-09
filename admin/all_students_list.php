@@ -26,7 +26,7 @@ if ($_GET['action'] == 'delete') {
     echo '<script>alert("Student is deleted.");window.location.href="all_students_list.php"</script>';
 }
 
-$get = $con->query("SELECT * FROM students WHERE is_deleted = 0");
+$get = $con->query("SELECT * FROM students WHERE is_deleted = 0 order by enrollment_no asc");
 ?>
 <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">-->
 <!--<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>-->
