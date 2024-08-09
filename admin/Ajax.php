@@ -128,11 +128,12 @@ switch ($post['status']) {
         // $password = str_replace($search, '', $post['password']);
         
         $username = mysqli_real_escape_string( $con, $_POST['username']);
-     $password = mysqli_real_escape_string( $con, $_POST['password']);
+        $password = mysqli_real_escape_string( $con, $_POST['password']);
+		$password = md5($password);
 
         // Use prepared statement to prevent SQL injection
         $stmt = $con->prepare("SELECT id, type FROM login WHERE username = ? AND password = ?");
-        $stmt->bind_param("ss", $username, md5($password));
+        $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $stmt->store_result();
 

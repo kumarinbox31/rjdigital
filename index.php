@@ -117,8 +117,8 @@
                                  <marquee behavior="scroll" direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();" style="height:400px;">
                                     <ul class="lst">
                                      <?php 
-// Corrected SQL Query
-$students  = $con->query("SELECT students.*, courses.course_name, courses.short_name, centers.institute_name 
+               // Corrected SQL Query
+               $students  = $con->query("SELECT students.*, courses.course_name, courses.short_name, centers.institute_name 
                           FROM students 
                           LEFT JOIN courses ON students.course_id = courses.id 
                           LEFT JOIN centers ON students.center_id = centers.id 
@@ -135,7 +135,7 @@ while($stu = $students->fetch_assoc()){
              style="height:110px;width:120px;">
         <br/>
         <strong>Name : <?php echo htmlspecialchars($stu['name']); ?></strong><br/>
-        <strong>Course : <?php echo htmlspecialchars($stu['course_name']); ?> (<?php echo htmlspecialchars($stu['short_name']); ?>)</strong><br/>
+        <strong>Course : <?php echo htmlspecialchars($stu['course_name']); ?> </strong><br/>
         <strong>Branch : <?php echo htmlspecialchars($stu['institute_name']); ?></strong>
     </center>
 </li>
@@ -189,7 +189,8 @@ while($stu = $students->fetch_assoc()){
                                     <ul class="lst">
                                        <!------------     -------------->
                                        <li style="border-bottom: 1px solid #000;">
-                                          <h3><span style="font-family: &quot;Comic Sans MS&quot;;"><span style="background-color: yellow;"><strong>DCA,ADCA &amp; CCC&nbsp; &quot;ADMISSION OPEN&quot;</strong> - DIGITAL COMPUTER INSTITUTE BHATPAR</span></span><strong><br />
+                                          <h3><span style="font-family: &quot;Comic Sans MS&quot;;">
+                                             <span style="background-color: black;"><strong>DCA,ADCA &amp; CCC&nbsp; &quot;ADMISSION OPEN&quot;</strong> - DIGITAL COMPUTER INSTITUTE BHATPAR</span></span><strong><br />
                                              </strong>
                                           </h3>
                                           <p></p>
