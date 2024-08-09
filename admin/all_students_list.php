@@ -36,9 +36,9 @@ $get = $con->query("SELECT * FROM students WHERE is_deleted = 0 order by enrollm
         <table id="centerTable" class="table table-bordered data-table">
             <thead>
                 <tr>
+                    <th>Enrollment No.</th>
                     <th>Date</th>
                     <th>Photo</th>
-                    <th>Enrollment No.</th>
                     <th>Name</th>
                     <th>Father's Name</th>
                     <th>Center</th>
@@ -57,9 +57,9 @@ $get = $con->query("SELECT * FROM students WHERE is_deleted = 0 order by enrollm
                     $certificateLink = "https://rjdigitall.webfire.site/view_enrollment.php?enrollment_no=" . $g['enrollment_no'];
                     echo '
                         <tr>
+                            <td>'.$g['enrollment_no'].'</td>
                             <td>'.date('d-M-y', strtotime($g['timestamp'])).'</td>
                             <td><img style="width:80px; height:100px;" src="../uploads/students/'.$g['photo'].'"></td>
-                            <td>'.$g['enrollment_no'].'</td>
                             <td>'.$g['name'].'</td>
                             <td>'.$g['father'].'</td>
                             <td>'.$ce['institute_name'].'</td>
