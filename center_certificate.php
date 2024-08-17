@@ -147,7 +147,7 @@ page[size="A5"][layout="landscape"] {
       <div class="content-wrapper" >
           <img src="<?=$bg?>" >
           <div class="text-wrapper">
-                  <img src="<?=$img?>" style="height: 6.4rem;width: 4.8rem;top: -18rem;left: 36.8rem;border-radius: 5px ">
+                  <!-- <img src="<?=$img?>" style="height: 6.4rem;width: 4.8rem;top: -18rem;left: 36.8rem;border-radius: 5px "> -->
                   
                     <p style="top: -22.3rem;"><?=$name?></p>
                     <p style="top: -20.5rem;"><?=$center_add?></p>
@@ -162,7 +162,7 @@ page[size="A5"][layout="landscape"] {
                      <img style="width: 87px;
     top: -29rem;
     right: 2.5rem;
-    height: 6.6rem;" src="/uploads/centers/<?php echo $a['image']; ?>" />
+    height: 6.6rem;" src="../uploads/centers/<?php echo $a['image']; ?>" />
                      
                       <?php
     // Data to encode in the QR code
