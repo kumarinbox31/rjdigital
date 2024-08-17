@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Certificate | <?=$s['enrollment_no']?></title>
+    <title>Certificate | <?=$center_number?></title>
      <style>
         body {
   /*background: rgb(204,204,204); */
@@ -133,6 +133,10 @@ page[size="A5"][layout="landscape"] {
           .address::first-line{
               margin-left:0;
           }
+            .text-wrapper > p{
+              font-weight: bold;
+              left:17rem;
+            }
       </style>
       <?php
         // print_r($session);exit;
@@ -145,15 +149,20 @@ page[size="A5"][layout="landscape"] {
           <div class="text-wrapper">
                   <img src="<?=$img?>" style="height: 6.4rem;width: 4.8rem;top: -18rem;left: 36.8rem;border-radius: 5px ">
                   
-                    <p style="top: -16.6rem;left: 13rem;"><?=$name?></p>
-                    <p style="top: -15.4rem;left: 13rem;"><?=$center_add?></p>
+                    <p style="top: -22.3rem;"><?=$name?></p>
+                    <p style="top: -20.5rem;"><?=$center_add?></p>
                   
-                    <p style="top: -14.2rem;left: 13rem;"><?=$center_number?></p>
-                    <p style="top: -13.2rem;left: 11rem;width: 7rem;"><?=$isu_date?></p>
-                    <p style="top: -18.3rem;left: 15.1rem;"><?=$center_name?></p>
+                    <p style="top: -24.5rem;"><?=$center_number?></p>
+                    <p style="top: -16.8rem"><?=$isu_date?></p>
+                    <p style="top: -18.6rem"><?=$center_name?></p>
                     <p style="top: -11.1rem;left: 13.1rem;"><?=$session?></p>
-                     <p style="top: -12.2rem;left: 13.1rem;">SIHS (An ISO 9001 : 2015 Certified Institute)</p>
+                     <!-- <p style="top: -24.5rem;left: 17rem;">SIHS (An ISO 9001 : 2015 Certified Institute)</p> -->
                      <p style="top: -10.1rem;left: 13.1rem;"><?=$valid?></p>
+                     <p title="aadhar" style="top:-14.7rem"><?php echo $a['aadhar_number']; ?></p>
+                     <img style="width: 87px;
+    top: -29rem;
+    right: 2.5rem;
+    height: 6.6rem;" src="/uploads/centers/<?php echo $a['image']; ?>" />
                      
                       <?php
     // Data to encode in the QR code
@@ -166,7 +175,10 @@ page[size="A5"][layout="landscape"] {
     ob_end_clean();
 
     // Display the QR code image
-    echo '<img src="data:image/png;base64,'.base64_encode($image_data).'" alt="QR Code" style="height: 2.9rem;width: 3rem;top: -7.3rem;left: 41.2rem;" >';
+    echo '<img src="data:image/png;base64,'.base64_encode($image_data).'" alt="QR Code" style="height: 5.3rem;
+    width: 5.1rem;
+    top: -11.5rem;
+    left: 2.6rem;" >';
 ?> 
                
                     

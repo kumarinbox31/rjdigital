@@ -8,9 +8,9 @@ $dotenv->load();
 
 include 'phpqrcode/qrlib.php';
 date_default_timezone_set('Asia/Kolkata');
-// if(session_status() == PHP_SESSION_NONE){
+if(session_status() == PHP_SESSION_NONE){
 session_start();
-// }
+}
 // if(defined('THEME_PATH'))
 // session_start();
 
@@ -22,18 +22,21 @@ function env($type,$default=''){
     }
 }
 
-$config['environment'] = env('ENVIRONMENT','development');
+$config['environment'] = env('ENVIRONMENT','production');
     
-switch($config['environment']){
+switch ($config['environment']) {
     case 'production':
+        ini_set('display_errors', 0);
+        ini_set('display_startup_errors', 0);
+        error_reporting(0);
+        break;
+    case 'development':
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
-    break;
-    case 'development':
-        // Add error reporting settings for development environment if needed
-    break;
+        break;
 }
+
 
 // define('APPPATH', $_SERVER['DOCUMENT_ROOT']);
 // define('BASE_URL', 'https://test.aimitbgf.in/');
