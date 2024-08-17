@@ -155,7 +155,7 @@ page[size="A5"][layout="landscape"] {
                     <p style="top: -24.5rem;"><?=$center_number?></p>
                     <p style="top: -16.8rem"><?=$isu_date?></p>
                     <p style="top: -18.6rem"><?=$center_name?></p>
-                    <p style="top: -11.1rem;left: 13.1rem;"><?=$session?></p>
+                    <!-- <p style="top: -11.1rem;left: 13.1rem;"><?=$session?></p> -->
                      <!-- <p style="top: -24.5rem;left: 17rem;">SIHS (An ISO 9001 : 2015 Certified Institute)</p> -->
                      <p style="top: -10.1rem;left: 13.1rem;"><?=$valid?></p>
                      <p title="aadhar" style="top:-14.7rem"><?php echo $a['aadhar_number']; ?></p>
