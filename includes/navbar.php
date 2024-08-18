@@ -71,6 +71,7 @@
                                     				array('label'=>'Examination Process','link'=>'https://rjdigitalcomputer.com/?page_id=40'),
                                                     array('label'=>'Admit Card','link'=>'get_admit_card.php'),
                                                     array('label'=>'Certificate Verification','link'=>'get_certificate.php'),
+                                                    array('label'=>'Winner Certificate  ','link'=>'get_winner_certificate.php'),
                                     				),
                                 );
                                 if(isset($_SESSION['student'])){

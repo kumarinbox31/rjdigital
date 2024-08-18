@@ -569,6 +569,7 @@ function permission($name,$type=ADMIN_TYPE){
             
           </ul>
         </li>
+    <li><a href="create_winner_certificate.php"><i class="fa fa-list"></i> <span>Winner Certificate</span></a></li>
         <li class="treeview">
          <a href="#">
             <i class="fa fa-file"></i>
@@ -640,7 +641,7 @@ function permission($name,$type=ADMIN_TYPE){
              
           </ul>
         </li-->
-<li><a href="videos.php"><i class="fa fa-book"></i> <span>Videos</span></a></li>>
+<li><a href="videos.php"><i class="fa fa-book"></i> <span>Videos</span></a></li>
 <li><a href="logos.php"><i class="fa fa-users"></i> <span>Our Certificates</span></a></li>
 
 <!--<li><a href="courses.php"><i class="fa fa-book"></i> <span> Courses</span></a></li>-->
