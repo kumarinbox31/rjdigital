@@ -6,8 +6,9 @@ $enroll = htmlspecialchars($_GET['enrollment_no']);
 $winner->enrollment_no = $enroll;
 $winner->getByEnrollmentNo();
 $winner->getCenter();
-if(empty($winner->name)){
-  echo '<script>alert("Certificate not found.");location.history();</script>';
+if (empty($winner->name)) {
+  echo '<script>alert("Certificate not found."); history.back();</script>';
+  exit; // Stop further execution if the condition is met
 }
 function convertToThreeDigits($number) {
   return str_pad($number, 3, '0', STR_PAD_LEFT);
