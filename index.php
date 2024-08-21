@@ -190,7 +190,7 @@ while($stu = $students->fetch_assoc()){
                                        <!------------     -------------->
                                        <li style="border-bottom: 1px solid #000;">
                                           <h3><span style="font-family: &quot;Comic Sans MS&quot;;">
-                                             <span style="background-color: black;"><strong>DCA,ADCA &amp; CCC&nbsp; &quot;ADMISSION OPEN&quot;</strong> - DIGITAL COMPUTER INSTITUTE BHATPAR</span></span><strong><br />
+                                             <span style="background-color: black;"><strong>DCA,ADCA &amp; CCC&nbsp; &quot;ADMISSION OPEN&quot;</strong> - RJ Digital Computer Institute Neori</span></span><strong><br />
                                              </strong>
                                           </h3>
                                           <p></p>
