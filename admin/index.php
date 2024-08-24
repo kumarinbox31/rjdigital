@@ -28,7 +28,7 @@ if ($_GET['action'] == 'delete') {
 }
 
 
-
+/*
 ?>
 <div class="panel panel-primary">
     <div class="panel-heading">
@@ -102,5 +102,6 @@ if ($_GET['action'] == 'delete') {
     </div>
 </div>
 <?php
+*/
 include 'includes/footer.php';
 ?>

@@ -453,7 +453,11 @@ function permission($name,$type=ADMIN_TYPE){
         </li>
         <li><a href="site_course.php"><i class="fa fa-book"></i> <span>Course Category</span></a></li>
         <li><a href="courses.php"><i class="fa fa-book"></i> <span> Courses</span></a></li>
-         <li class="treeview">
+        <li><a href="create_talent_certificate.php"><i class="fa fa-book"></i> <span> Computer Talent Certificate</span></a></li>
+         
+        
+      <?/*  
+        <li class="treeview">
          <a href="#">
             <i class="fa fa-file"></i>
             <span>Exam Area</span>
@@ -470,6 +474,7 @@ function permission($name,$type=ADMIN_TYPE){
             
           </ul>
         </li>
+        */?>
         <li class="treeview">
          <a href="#">
             <i class="fa fa-file"></i>
@@ -489,9 +494,9 @@ function permission($name,$type=ADMIN_TYPE){
         </li>
         
         <li><a href="gallery_category.php"><i class="fa fa-gear"></i> Gallery Category</a></li>
-              <li><a href="gallery_image.php"><i class="fa fa-gear"></i> Image Gallery</a></li>
+        <li><a href="gallery_image.php"><i class="fa fa-gear"></i> Image Gallery</a></li>
        
-       
+      <?/* 
        <li class="treeview">
          <a href="#">
             <i class="fa fa-file"></i>
@@ -541,6 +546,7 @@ function permission($name,$type=ADMIN_TYPE){
             
           </ul>
         </li>
+        */?>
         <!--<li class="treeview">-->
         <!-- <a href="#">-->
         <!--    <i class="fa fa-file"></i>-->
@@ -555,6 +561,7 @@ function permission($name,$type=ADMIN_TYPE){
             
         <!--  </ul>-->
         <!--</li>-->
+        <?/*
         <li class="treeview">
          <a href="#">
             <i class="fa fa-file"></i>
@@ -612,6 +619,8 @@ function permission($name,$type=ADMIN_TYPE){
             
           </ul>
         </li>
+         */?>
+       
      <!--   <li class="treeview">
          <a href="#">
             <i class="fa fa-file"></i>
@@ -646,9 +655,9 @@ function permission($name,$type=ADMIN_TYPE){
 <!--<li><a href="courses.php"><i class="fa fa-book"></i> <span> Courses</span></a></li>-->
 <li><a href="contact_query.php"><i class="fa fa-gear"></i> <span> Contact Queries</span></a></li>
 <!--<li><a href="contact_us.php"><i class="fa fa-gear"></i> <span>Contact Us</span></a></li>-->
-<li><a href="manage_download.php"><i class="fa fa-download"></i> <span>Manage Download</span></a></li>
-<li><a href="site_manager.php"><i class="fa fa-download"></i> <span>Site Manager</span></a></li>
-<li><a href="students_files.php"><i class="fa fa-download"></i> <span>Student Download Files</span></a></li>
+<!-- <li><a href="manage_download.php"><i class="fa fa-download"></i> <span>Manage Download</span></a></li> -->
+<!-- <li><a href="site_manager.php"><i class="fa fa-download"></i> <span>Site Manager</span></a></li> -->
+<!-- <li><a href="students_files.php"><i class="fa fa-download"></i> <span>Student Download Files</span></a></li> -->
 <li class="treeview">
      <a href="#">
         <i class="fa fa-gears"></i>
@@ -664,7 +673,7 @@ function permission($name,$type=ADMIN_TYPE){
           <li><a href="setting_footer_images.php"><i class="fa fa-circle-o"></i> <span> Footer Images </span></a></li>
           <li><a href="change_password.php"><i class="fa fa-circle-o"></i> <span> Change Password </span></a></li>
           <li><a href="logo_setting.php"><i class="fa fa-circle-o"></i> <span>Logo Setting</span></a></li>
-          <li><a href="payment_system.php"><i class="fa fa-circle-o"></i> <span> Payment Settings</span></a></li>
+          <!-- <li><a href="payment_system.php"><i class="fa fa-circle-o"></i> <span> Payment Settings</span></a></li> -->
           <li><a href="use_page_items.php"><i class="fa fa-circle-o"></i> <span> Use Page Items </span></a></li>
       </ul>
     </li>

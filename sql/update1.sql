@@ -8,3 +8,6 @@ CREATE TABLE `computer_talent_certificate` (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+ALTER TABLE `computer_talent_certificate`
+ADD COLUMN `center_id` INT DEFAULT 0 AFTER `id`;
