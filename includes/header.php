@@ -217,11 +217,11 @@
                         </style>
                         <ul class="list-inline sm-pull-none sm-text-center text-white mb-sm-20 mt-10" style="font-size:14px;padding-inline-start: 1px;">
                            <!--<li class=" pl-10"><a href="contact-us.html" class="text-black"> Enquiry Here</a></li>-->
-                           <li class=" pl-10"><a href="<?=BASE_URL?>list_center.php" class="text-black">Franchise Details</a></li>
+                           <!-- <li class=" pl-10"><a href="<?=BASE_URL?>list_center.php" class="text-black">Franchise Details</a></li>
                            <li class=" pl-10"><a href="<?=BASE_URL?>franchisee_form.php" class="text-black">Apply Franchise</a></li>
-                           <li class=" pl-10"><a href="<?=BASE_URL?>center_login.php" target="_blank" class="text-black">Franchise Login</a></li>
-                           <li class=" pl-10"><a href="<?=BASE_URL?>admin" target="_blank" class="text-black"> Admin Login</a></li>
-                           <li class="pl-10"><a href="<?=BASE_URL?>student_login.php" class="text-black">Student Login</a></li>
+                           <li class=" pl-10"><a href="<?=BASE_URL?>center_login.php" target="_blank" class="text-black">Franchise Login</a></li> -->
+                           <!-- <li class=" pl-10"><a href="<?=BASE_URL?>admin" target="_blank" class="text-black"> Admin Login</a></li> -->
+                           <!-- <li class="pl-10"><a href="<?=BASE_URL?>student_login.php" class="text-black">Student Login</a></li> -->
                            <!--<a href="<?=THEME_PATH?>/new" class="text-white m-0 pl-10 mt-0" target="_blank"><span class="btn btn-theme-colored2 btn-xs">Login</span></a>-->  
                         </ul>
                      </center>
@@ -345,7 +345,7 @@
                      */
                     include 'navbar.php';
                     ?>
-                     <div class="btn-outer"><a href="/franchisee_form.php" class="theme-btn quote-btn"><span class="fa fa-user"></span> Apply Franchise </a></div>
+                     <!-- <div class="btn-outer"><a href="/franchisee_form.php" class="theme-btn quote-btn"><span class="fa fa-user"></span> Apply Franchise </a></div> -->
                   </div>
                </div>
             </div>
