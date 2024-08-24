@@ -88,7 +88,8 @@
                                                 );
                                 }
                                 $menuArr['Student Zone'] = array_merge($menuArr['Student Zone'],$newStudent);
-                            foreach($menuArr as $key => $val){
+                           $menuArr = [];
+                                foreach($menuArr as $key => $val){
                                 echo '<li class="dropdown" >
                                      <a href="javascript:return(0);">
                                      '.ucwords($key).' 

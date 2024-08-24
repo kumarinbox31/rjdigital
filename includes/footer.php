@@ -34,14 +34,14 @@
                                     <?php /*<li><a href="videos.html"><span class="fa fa-arrow-right"></span>Videos</a></li>
                                     // <li><a href="payment.html"><span class="fa fa-arrow-right"></span>Make Payment</a></li> */ ?>
                                     <li><a href="/contact_us.php"><span class="fa fa-arrow-right"></span>Contact Us</a></li>
-                                 	<li><a href="/student_form.php"><span class="fa fa-arrow-right"></span>Online Registration</a></li>
+                                 	<!-- <li><a href="/student_form.php"><span class="fa fa-arrow-right"></span>Online Registration</a></li> -->
                                  </ul>
                               </div>
                               <div class="col-md-6 col-sm-12 col-xs-12">
                                  <ul>
                                     <li><a href="/enrollment_verification.php"><span class="fa fa-arrow-right"></span>Student Verification</a></li>
                                     <li><a href="/student_login.php"><span class="fa fa-arrow-right"></span>Student Login</a></li>
-                                    <li><a href="/get_admit_card.php"><span class="fa fa-arrow-right"></span>Admit Card</a></li>
+                                    <!-- <li><a href="/get_admit_card.php"><span class="fa fa-arrow-right"></span>Admit Card</a></li> -->
                                     <?/* // <li><a href="downloads.html"><span class="fa fa-arrow-right"></span>Downloads</a></li>
                                     // <li><a href="result.html"><span class="fa fa-arrow-right"></span>Result</a></li> */?>
                                  </ul>

@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Aug 02, 2024 at 12:06 AM
--- Server version: 10.3.39-MariaDB-0ubuntu0.20.04.2
--- PHP Version: 8.1.29
+-- Host: 127.0.0.1
+-- Generation Time: Aug 24, 2024 at 06:22 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `rjdigitall_final`
+-- Database: `rjdigital`
 --
 
 -- --------------------------------------------------------
@@ -44,7 +44,7 @@ CREATE TABLE `admit_card` (
 --
 
 INSERT INTO `admit_card` (`id`, `timestamp`, `enrollment_no`, `roll_no`, `course_id`, `center_id`, `exam_center`, `exam_date`, `exam_time`) VALUES
-(12, '2024-07-16 06:12:35', 'RJDCI/001', '001', '9', '', 'RJ DIGITAL COMPUTER INSTITUTE NEORI AMBEDKAR NAGAR ', '2024-07-16', '16:00');
+(8, '2024-07-08 11:55:28', 'RJDCI/001', '001', '12', '', 'Rj Digital Computer Institute', '2024-07-10', '21:00');
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,8 @@ CREATE TABLE `centers` (
 --
 
 INSERT INTO `centers` (`id`, `timestamp`, `center_number`, `name`, `institute_name`, `dob`, `pan_number`, `aadhar_number`, `center_full_address`, `pincode`, `state_id`, `city_id`, `no_of_computer_operator`, `no_of_class_room`, `total_computer`, `space_of_computer_center`, `whatsapp_number`, `contact_number`, `email_id`, `qualification_of_center_head`, `staff_room`, `water_supply`, `toilet`, `reception`, `username`, `password`, `transection_id`, `status`, `image`, `is_deleted`, `session`, `valid_upto`) VALUES
-(3, '2024-06-25 08:58:58', 'RJDCI/ABN/001', 'SACHIN KUMAR', 'RJ DIGITAL COMPUTER INSTITUTE- NEORI,  A.N. (U.P.) 224139', '1998-07-01', 'ABCD1234A1V1', '319250682752', 'NEORI  RAMNAGAR ROAD AMBEDKAR NAGAR (U.P.) 224139', 224139, '1', '29', '5', '3', '30', '30', '7087524083', '7309058150', 'rjdigitalcomputer@gmail.com', 'Post Graduation', 'yes', 'yes', 'yes', '1', 'Sachin@123', 'Sachin@123', '', 1, 'product__1721217971sachin_sir-removebg-preview.png', 0, '2022', '....');
+(3, '2024-06-25 08:58:58', 'RJDCI/ABN/001', 'SACHIN KUMAR', 'RJ DIGITAL COMPUTER INSTITUTE- NEORI , A.N. (U.P.) 224139', '1998-07-01', 'ABCD1234A1V1', '319250682752', 'NEORI  RAMNAGAR ROAD AMBEDKAR NAGAR (U.P.) 224139', 224139, '1', '29', '5', '3', '20', '20', '8169951603', '7309058150', 'rjdigitalcomputer@gmail.com', 'Post Graduation', 'yes', 'yes', 'yes', '1', 'Sachin@123', 'Sachin@123', '', 1, 'product__1719985223fsafd.jpeg', 0, '', ''),
+(4, '2024-07-06 01:39:34', '1720229974', 'Abhishek Yadav ', 'Check ', '2024-07-06', '1234567890', '123456789', 'Suhag Nagar ', 283203, '1', '1', '26', '20', '30', '300', '123456789', '123456789', 'abhishek@gmail.com', 'Check ', 'yes', 'no', 'yes', 'Check ', 'center@gmail.com', '1234', '', 1, 'product__1720229974webfire-degitech-suhag-nagar-firozabad-internet-website-designers-ceq0r5p8kw.jpg', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -163,25 +164,7 @@ CREATE TABLE `certificates` (
 --
 
 INSERT INTO `certificates` (`id`, `timestamp`, `enrollment_no`, `dob`, `center_id`, `status`, `issue_date`, `serial_no`, `session`, `grade`, `total_marks`, `obtain_marks`, `percentage`, `certificate_no`) VALUES
-(15, '2024-07-18 10:22:25', 'RJDCI/006', '2006-08-07', NULL, 1, '2024-01-13', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/006'),
-(16, '2024-07-18 10:26:17', 'RJDCI/007', '2006-05-08', NULL, 1, '2024-01-12', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/007'),
-(20, '2024-07-18 12:30:18', 'RJDCI/014', '2002-08-08', NULL, 1, '2024-01-26', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/014'),
-(21, '2024-07-19 08:13:39', 'RJDCI/002', '2005-03-11', NULL, 1, '2024-03-08', '', '', 'A', '1600', '1440', '90.00', 'RJDCI/CER/002'),
-(22, '2024-07-20 11:20:07', 'RJDCI/008', '2006-02-01', NULL, 1, '2024-01-14', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/008'),
-(23, '2024-07-21 13:50:25', 'RJ/S/20240026', '2024-07-18', NULL, 1, '2000-01-01', '', '', 'F', '1600', '400', '25.00', 'RJ/S/20240010'),
-(24, '2024-07-22 10:07:16', 'RJDCI/009', '2003-06-07', NULL, 1, '2024-01-17', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/009'),
-(25, '2024-07-22 10:20:18', 'RJDCI/010', '2004-08-04', NULL, 1, '2024-01-18', '', '', 'A', '1600', '1312', '82.00', 'RJDCI/CER/010'),
-(26, '2024-07-22 10:49:37', 'RJDCI/011', '2003-08-06', NULL, 1, '2024-01-22', '', '', 'A', '1600', '1312', '82.00', 'RJDCI/CER/011'),
-(27, '2024-07-22 11:04:55', 'RJDCI/012', '2005-07-16', NULL, 1, '2024-01-22', '', '', 'A', '1600', '1312', '82.00', 'RJDCI/CER/012'),
-(28, '2024-07-22 11:15:44', 'RJDCI/013', '2007-09-05', NULL, 1, '2024-01-25', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/013'),
-(29, '2024-07-22 11:27:56', 'RJDCI/015', '2004-05-12', NULL, 1, '2024-01-26', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/015'),
-(30, '2024-07-22 11:45:41', 'RJDCI/016', '2008-06-15', NULL, 1, '2024-01-27', '', '', 'A', '1600', '1312', '82.00', 'RJDCI/CER/016'),
-(31, '2024-07-22 12:50:45', 'RJDCI/017', '2009-01-01', NULL, 1, '2024-01-28', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/017'),
-(32, '2024-07-23 09:46:40', 'RJDCI/018', '2005-07-01', NULL, 1, '2024-01-30', '', '', 'A', '1600', '1280', '80.00', 'RJDCI/CER/018'),
-(33, '2024-07-23 09:52:48', 'RJDCI/019', '2006-07-10', NULL, 1, '2024-01-30', '', '', 'A', '1600', '1280', '80.00', 'RJDCI/CER/019'),
-(37, '2024-07-26 05:39:34', 'RJDCI/020', '1999-12-30', NULL, 1, '2024-02-01', '', '', 'A', '1600', '1280', '80.00', 'RJDCI/CER/020'),
-(38, '2024-07-27 08:07:02', 'RJDCI/030', '2024-07-26', NULL, 1, '2023-05-07', '', '', 'A', '900', '810', '90.00', 'RJDCI/CER/030'),
-(39, '2024-07-30 06:22:53', 'RJDCI/005', '2002-05-15', NULL, 1, '2024-01-10', '', '', 'A', '1600', '1360', '85.00', 'RJDCI/CER/005');
+(9, '2024-07-07 18:24:10', 'RJDCI/001', '2000-07-15', NULL, 1, '2024-01-03', '', '2023', 'A', '1600', '1440', '90.00', 'RJDCI/CER/001');
 
 -- --------------------------------------------------------
 
@@ -868,101 +851,11 @@ INSERT INTO `check_session` (`id`, `timestamp`, `user_id`, `session_id`) VALUES
 (717, '2024-07-11 06:06:38', '1', '990726'),
 (718, '2024-07-11 06:10:07', '1', '407182'),
 (719, '2024-07-11 13:10:47', '1', '945872'),
-(720, '2024-07-11 14:28:13', '1', '536760'),
-(721, '2024-07-11 16:18:59', '1', '118107'),
-(722, '2024-07-11 16:32:21', '1', '499870'),
-(723, '2024-07-11 17:01:28', '1', '308489'),
-(724, '2024-07-11 17:13:53', '1', '165785'),
-(725, '2024-07-12 02:49:31', '14', '696637'),
-(728, '2024-07-12 05:39:07', '1', '822854'),
-(729, '2024-07-12 05:45:18', '1', '669660'),
-(730, '2024-07-12 07:21:01', '1', '303768'),
-(731, '2024-07-12 07:21:04', '1', '906864'),
-(732, '2024-07-12 07:40:59', '1', '292832'),
-(733, '2024-07-12 07:45:59', ' 5', '238335'),
-(734, '2024-07-12 08:16:54', ' 5', '395433'),
-(735, '2024-07-12 09:55:31', '1', '374801'),
-(736, '2024-07-12 12:05:23', '1', '534133'),
-(738, '2024-07-12 19:08:46', ' 3', '842896'),
-(739, '2024-07-13 01:53:15', '1', '535600'),
-(740, '2024-07-13 01:56:26', ' 5', '362005'),
-(741, '2024-07-13 04:43:43', '1', '844276'),
-(742, '2024-07-13 05:05:08', '1', '521016'),
-(744, '2024-07-13 10:42:54', '1', '289367'),
-(745, '2024-07-13 11:24:49', '1', '821649'),
-(746, '2024-07-13 11:26:26', '1', '367086'),
-(747, '2024-07-13 11:31:54', ' 5', '840714'),
-(748, '2024-07-13 11:46:08', ' 5', '277398'),
-(749, '2024-07-13 11:48:01', ' 3', '645382'),
-(750, '2024-07-13 11:50:35', ' 5', '237743'),
-(751, '2024-07-13 11:54:59', ' 5', '605629'),
-(752, '2024-07-13 12:30:07', ' 3', '297551'),
-(753, '2024-07-13 12:32:58', ' 5', '901036'),
-(754, '2024-07-13 12:33:40', ' 3', '953873'),
-(755, '2024-07-13 12:35:36', ' 4', '772779'),
-(756, '2024-07-13 14:07:38', '1', '479972'),
-(757, '2024-07-13 14:14:55', '1', '614080'),
-(758, '2024-07-13 14:41:36', '1', '557726'),
-(760, '2024-07-15 10:11:09', '1', '293070'),
-(761, '2024-07-15 10:16:27', '19', '274015'),
-(762, '2024-07-15 12:44:15', '1', '463760'),
-(764, '2024-07-16 06:25:06', '1', '729055'),
-(765, '2024-07-16 06:34:05', '1', '933260'),
-(767, '2024-07-16 09:49:41', '1', '678678'),
-(769, '2024-07-17 03:34:00', '1', '691893'),
-(770, '2024-07-17 03:36:34', '1', '302920'),
-(771, '2024-07-17 05:24:58', '1', '634372'),
-(772, '2024-07-17 05:40:04', '1', '344379'),
-(773, '2024-07-17 05:41:46', '21', '139306'),
-(774, '2024-07-17 10:34:01', '1', '861800'),
-(776, '2024-07-17 10:40:21', '21', '768484'),
-(778, '2024-07-17 10:46:15', '21', '956310'),
-(779, '2024-07-17 10:47:15', '24', '606027'),
-(780, '2024-07-17 10:51:11', '1', '305578'),
-(782, '2024-07-18 03:10:20', '1', '689861'),
-(783, '2024-07-18 03:14:43', '21', '811946'),
-(785, '2024-07-18 05:18:36', '1', '371631'),
-(787, '2024-07-18 05:27:30', '1', '336491'),
-(788, '2024-07-18 05:28:11', '1', '261572'),
-(789, '2024-07-18 05:32:58', '1', '904192'),
-(790, '2024-07-18 05:53:09', '1', '281210'),
-(794, '2024-07-18 10:40:34', '1', '683834'),
-(796, '2024-07-18 11:59:53', '1', '623418'),
-(797, '2024-07-18 12:07:34', '1', '119961'),
-(798, '2024-07-18 12:12:49', '1', '637182'),
-(799, '2024-07-18 12:16:50', '1', '465831'),
-(800, '2024-07-18 12:20:05', '1', '644001'),
-(801, '2024-07-18 12:21:45', '1', '836561'),
-(803, '2024-07-19 07:50:57', '1', '812467'),
-(804, '2024-07-20 10:19:13', '1', '782247'),
-(806, '2024-07-20 11:01:28', ' 3', '473290'),
-(807, '2024-07-20 11:01:54', '1', '387423'),
-(808, '2024-07-20 11:13:46', ' 3', '111466'),
-(809, '2024-07-20 11:27:43', ' 3', '180633'),
-(810, '2024-07-20 11:44:41', ' 3', '927954'),
-(811, '2024-07-20 11:45:10', '1', '221873'),
-(812, '2024-07-21 03:41:17', '1', '356532'),
-(813, '2024-07-21 03:43:21', ' 3', '338209'),
-(814, '2024-07-21 13:31:27', ' 3', '827200'),
-(815, '2024-07-21 13:40:35', '1', '891087'),
-(816, '2024-07-21 14:05:59', ' 3', '397343'),
-(817, '2024-07-21 14:07:15', '1', '194505'),
-(818, '2024-07-22 07:03:33', ' 3', '997134'),
-(820, '2024-07-22 09:46:15', ' 3', '866711'),
-(821, '2024-07-22 10:37:24', ' 3', '987077'),
-(822, '2024-07-22 10:39:48', '1', '966024'),
-(829, '2024-07-24 15:47:51', ' 3', '331190'),
-(830, '2024-07-24 15:55:06', '1', '702676'),
-(831, '2024-07-25 00:48:13', ' 3', '689692'),
-(832, '2024-07-25 11:42:50', ' 3', '377667'),
-(836, '2024-07-26 05:13:29', '1', '232004'),
-(837, '2024-07-26 05:47:51', '1', '228188'),
-(842, '2024-07-27 12:19:13', '1', '204815'),
-(843, '2024-07-28 07:17:29', '1', '439571'),
-(845, '2024-07-30 06:33:00', '1', '741967'),
-(846, '2024-07-31 03:13:53', '1', '544232'),
-(847, '2024-07-31 05:08:02', '1', '325975'),
-(849, '2024-08-01 14:55:16', '1', '665733');
+(721, '2024-08-09 03:29:05', '1', '940629'),
+(722, '2024-08-17 10:40:34', ' 4', '707150'),
+(723, '2024-08-17 14:11:39', ' 4', '956905'),
+(725, '2024-08-17 15:19:31', '1', '224832'),
+(726, '2024-08-18 14:31:01', '1', '818927');
 
 -- --------------------------------------------------------
 
@@ -995,7 +888,7 @@ INSERT INTO `city` (`id`, `timestamp`, `city_name`, `state_id`) VALUES
 (11, '2020-04-25 13:13:04', 'Jalpaiguri', '3'),
 (12, '2020-04-25 13:13:15', 'Jhargram', '3'),
 (13, '2020-04-25 13:13:26', ' Kalimpong', '3'),
-(14, '2024-07-13 11:57:45', 'Kolkata', '3'),
+(14, '2020-04-25 13:13:46', 'Kolkata', '2'),
 (15, '2020-04-25 13:13:59', ' Malda', '3'),
 (16, '2020-04-25 13:14:12', 'Murshidabad', '3'),
 (17, '2020-04-25 13:14:21', 'Nadia', '3'),
@@ -1766,29 +1659,9 @@ CREATE TABLE `courses` (
 
 INSERT INTO `courses` (`id`, `timestamp`, `course_code`, `categary`, `course_name`, `short_name`, `duration`) VALUES
 (9, '2024-06-25 11:21:18', '001', '9', 'ADVANCE DIPLOMA IN COMPUTER APPLICATION (ADCA)', 'ADCA', '12 MONTH'),
+(11, '2024-06-25 11:27:43', '001', '10', '[ Advance Diploma in Financial Accounting ]', 'ADFA', '12 MONTH'),
 (12, '2024-06-29 05:08:14', '02', '9', 'MASTER DIPLOMA IN COMPUTER APPLICATION [MDCA]', 'MDCA', '15 MONTH'),
-(16, '2024-07-13 06:51:54', '01', '10', 'CERTIFICATE COURSE IN TALLY  (CCT)', 'CCT', '3 MONTH'),
-(23, '2024-07-26 10:41:26', '02', '10', 'ADVANCE DIPLOMA IN FINANCIAL ACCOUNTING (ADFA)', 'ADFA', '12 MONTH'),
-(24, '2024-07-26 10:42:16', '03', '9', 'DIPLOMA IN COMPUTER APPLICATION (DCA)', 'DCA', '6 MONTH'),
-(25, '2024-07-26 10:43:27', '04', '9', 'ADVANCE DIPLOMA IN INFORMATION TECHNOLOGY (ADIT)', 'ADIT', '12 MONTH'),
-(26, '2024-07-26 10:47:03', '05', '9', 'DIPLOMA IN DESKTOP PUBLISHING (DTP)', 'DTP', '6 MONTH'),
-(27, '2024-07-26 10:48:43', '06', '9', 'CERTIFICATE IN COMPUTER APPLICATION (CCA)', 'CCA', '3 MONTH'),
-(28, '2024-07-26 10:51:59', '07', '9', 'ADVANCE DIPLOMA IN COMPUTER TEACHAR TRAINING(ADCTT)', 'ADCTT', '12 MONTH'),
-(29, '2024-07-26 10:56:30', '03', '10', 'BASIC OF FINANCIAL ACCOUNTING (BFA)', 'BFA', '1-2 MONTH'),
-(30, '2024-07-26 10:57:43', '04', '10', 'CERTIFICATE IN FINANCIAL ACCOUNTING (CFA)', 'CFA', '3 MONTH'),
-(31, '2024-07-26 10:59:20', '05', '10', 'DIPLOMA IN FINANCIAL ACCOUNTING (DFA)', 'DFA', '6 MONTH'),
-(32, '2024-07-26 11:01:00', '06', '10', 'DIPLOMA IN COMPUTER APPLICATION WITH TALLY (DCA-T)', 'DCA-T', '9 MONTH'),
-(33, '2024-07-26 11:05:17', '01', '11', 'DIPLOMA IN WEB DESIGNING (DWD)', 'DWD', '6 MONTH'),
-(35, '2024-07-26 11:10:51', '01', '14', 'C & C + + PROGRAMMING', 'C & C + +', '6 MONTH'),
-(36, '2024-07-26 11:12:15', '02', '14', 'JAVA PROGRAMMING', 'JAVA', '6 MONTH'),
-(37, '2024-07-26 11:13:13', '03', '14', 'DIPLOMA IN COMPUTER PROGRAMMING (DCP)', 'DCP', '6 MONTH'),
-(38, '2024-07-26 11:21:27', '01', '15', 'CERTIFICATE COURSE IN AUTO CAD (CCAC)', 'CCAC', '3 MONTH'),
-(39, '2024-07-26 11:22:56', '02', '15', 'DIPLOMA  COURSE IN AUTO CAD (DCAC)', 'DCAC', '6 MONTH'),
-(41, '2024-07-26 11:28:12', '02', '16', 'CERTIFICATE IN HARDWARE & NETWORKING (CHN)', 'CHN', '3 MONTH'),
-(42, '2024-07-26 11:43:31', '03', '16', 'DIPLOMA IN HARDWARE & NETWORKING (DHN)', 'DHN', '6 MONTH'),
-(44, '2024-07-26 12:12:30', '02', '11', 'ADVANCE DIPLOMA IN WEB DESIGN & DEVELOPMENT (ADWD)', 'ADWD', '12 MONTH'),
-(45, '2024-07-26 12:16:20', '01', '16', 'BASIC OF HARDWARE & NETWORKING (BHN)', 'BHN', '1-2 MONTH'),
-(46, '2024-07-26 12:18:38', '04', '16', 'ADVANCE DIPLOMA IN HARDWARE & NETWORKING (ADHN)', 'ADHN', '12 MONTH');
+(13, '2024-07-06 01:36:15', '0010', '12', 'Course 1', 'Check Course ', '12 months ');
 
 -- --------------------------------------------------------
 
@@ -1824,7 +1697,8 @@ CREATE TABLE `exams` (
 INSERT INTO `exams` (`id`, `exam_name`, `max_questions`, `course_id`, `start`, `end`, `status`) VALUES
 (1, 'adsf', '20', 1, '2024-06-25 13:05', 'null', 1),
 (2, 'Check', '20', 2, '2024-06-25 14:30', '2024-06-25 14:35', 1),
-(9, 'ADCA', '50', 9, NULL, NULL, 1);
+(3, 'asfdd', '20', 11, '2024-07-10 10:00', '2024-07-10 11:00', 0),
+(4, 'MDCA YEARLY EXAM 2024', '100', 12, '2024-07-10 07:33', '2024-07-10 19:40', 0);
 
 -- --------------------------------------------------------
 
@@ -1850,9 +1724,7 @@ CREATE TABLE `exams_by_students` (
 
 INSERT INTO `exams_by_students` (`id`, `time`, `exam_id`, `course_id`, `student_id`, `ttl_attempts`, `max_marks`, `total`, `nextTabsOpen`) VALUES
 (1, '1719306162', 2, 2, 2, '1', '20', '0', ''),
-(2, '1720620285', 4, 12, 14, '1', '100', '0', ''),
-(3, '1721038698', 5, 12, 19, '5', '5', '1', ''),
-(4, '1721298927', 8, 9, 21, '1', '20', '1', '');
+(2, '1720620285', 4, 12, 14, '1', '100', '0', '');
 
 -- --------------------------------------------------------
 
@@ -1873,7 +1745,7 @@ CREATE TABLE `exam_questions` (
 INSERT INTO `exam_questions` (`id`, `exam_id`, `question`) VALUES
 (2, 1, 'Check'),
 (3, 2, 'Question 1'),
-(20, 9, 'whafrsdf');
+(4, 4, 'What is your name');
 
 -- --------------------------------------------------------
 
@@ -1902,10 +1774,10 @@ INSERT INTO `exam_question_answers_list` (`id`, `question_id`, `answer`, `is_rig
 (10, 3, '2', 0, 2),
 (11, 3, '3', 0, 2),
 (12, 3, '4', 0, 2),
-(73, 20, 'sadfn', 1, 9),
-(74, 20, 'asjdf', 0, 9),
-(75, 20, 'sdjf', 0, 9),
-(76, 20, 'sdjs', 0, 9);
+(13, 4, '1', 1, 4),
+(14, 4, '2', 0, 4),
+(15, 4, '3', 0, 4),
+(16, 4, '4', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -1992,8 +1864,7 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `timestamp`, `title`, `image`, `category_id`, `seq`) VALUES
-(2, '2024-07-12 05:50:13', 'Image Gallery', 'product__17207634132.jpg', '5', 99999),
-(6, '2024-07-13 05:24:01', '1', 'product__1720848241DSC_0053.jpg', '5', 99999);
+(1, '2024-07-08 10:13:43', 'logo', 'product__1720433623Screenshot 2024-05-16 102602.jpg', '5', 99999);
 
 -- --------------------------------------------------------
 
@@ -2078,14 +1949,14 @@ CREATE TABLE `his_page` (
 --
 
 INSERT INTO `his_page` (`id`, `timestamp`, `page_header`, `page_name`, `content`, `status`, `default_page`, `link`, `redirect`) VALUES
-(1, '2024-07-20 11:16:46', 'product__1721474206fgfg.jpeg', 'Home', '', '1', 1, '', 0),
-(12, '2024-07-17 10:32:01', 'product__1702221728logo.jpg', 'Gallery', '', '1', 0, 'https://rjdigitalcomputer.com/gallery.php', 0),
-(31, '2024-07-17 10:32:12', 'product__1720507674aboutus-aboutme.jpg', 'About Us', '<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><strong>Welcome to RJ Digital Computer Institute</strong></span></span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\">Rajdhari Jiyana&nbsp;Digital Computer Institute is an ISO 9001:2015 Certified Institute. Rajdhari Jiyana&nbsp; Digital Computer Institute is providing &ndash; Vocational &amp; professional education, Computer Education, Corporate &amp; Govt trainings. It services Software, Hardware, financial &amp; Inventory accounting, e- taxation, Retail, Telecom Courses. The Aim of this Institution was given a new meaning of vocational courses &amp; was made available to all section of the society be it rich or poor, adult or children , no one was neglected.</span></span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><strong>Mission And&nbsp;Vision</strong></span></span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><strong>Our Mission: </strong>At RJ Digital Computer Institute, our mission is to empower individuals with the skills they need to succeed in the digital world. We believe in providing quality education that is accessible to all, regardless of background or experience. Our goal is to equip students with practical knowledge and hands-on experience in cutting-edge technologies. Through our expert-led courses and personalized support, we strive to cultivate a learning environment where students can thrive and reach their full potential. We are committed to staying at the forefront of technology education, constantly evolving our curriculum to meet the demands of the ever-changing digital landscape.</span></span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><strong>Our Vision : </strong>At RJ Digital Computer Institute, our vision is to be a leading global provider of high-quality digital education, recognized for our innovation, expertise, and commitment to student success. We aim to inspire and empower individuals from all walks of life to pursue their passion for technology and achieve their career goals. Our vision is to create a dynamic learning community where creativity, collaboration, and critical thinking thrive. We strive to be a catalyst for positive change in the digital workforce, preparing our students to adapt and excel in an increasingly digital world. Together, we envision shaping the future of technology education.</span></span></span></p>\r\n', '1', 0, 'https://rjdigitalcomputer.com/?page_id=31', 0),
+(1, '2024-07-10 02:11:09', '', 'Home', '', '1', 1, '', 0),
+(12, '2024-07-10 02:11:13', 'product__1702221728logo.jpg', 'Gallery', '', '1', 0, 'https://rjdigitall.webfire.site/gallery.php', 0),
+(31, '2024-07-10 02:11:16', 'product__1720507674aboutus-aboutme.jpg', 'About Us', '<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><strong>Welcome to RJ Digital Computer Institute</strong></span></span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\">RJ Digital Computer Institute is an ISO 9001:2015 Certified Institute. RJ Digital Computer Institute is providing &ndash; Vocational &amp; professional education, Computer Education, Corporate &amp; Govt trainings. It services Software, Hardware, financial &amp; Inventory accounting, e- taxation, Retail, Telecom Courses. The Aim of this Institution was given a new meaning of vocational courses &amp; was made available to all section of the society be it rich or poor, adult or children , no one was neglected.</span></span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><strong>Mission And&nbsp;Vision</strong></span></span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><strong>Our Mission: </strong>At RJ Digital Computer Institute, our mission is to empower individuals with the skills they need to succeed in the digital world. We believe in providing quality education that is accessible to all, regardless of background or experience. Our goal is to equip students with practical knowledge and hands-on experience in cutting-edge technologies. Through our expert-led courses and personalized support, we strive to cultivate a learning environment where students can thrive and reach their full potential. We are committed to staying at the forefront of technology education, constantly evolving our curriculum to meet the demands of the ever-changing digital landscape.</span></span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:20px\"><span style=\"font-family:Georgia,serif\"><strong>Our Vision : </strong>At RJ Digital Computer Institute, our vision is to be a leading global provider of high-quality digital education, recognized for our innovation, expertise, and commitment to student success. We aim to inspire and empower individuals from all walks of life to pursue their passion for technology and achieve their career goals. Our vision is to create a dynamic learning community where creativity, collaboration, and critical thinking thrive. We strive to be a catalyst for positive change in the digital workforce, preparing our students to adapt and excel in an increasingly digital world. Together, we envision shaping the future of technology education.</span></span></span></p>\r\n', '1', 0, 'https://rjdigitall.webfire.site/?page_id=31', 0),
 (38, '2024-07-10 02:07:45', 'product__1720507954hm-slide-2.jpg', 'Get Franchise ', '<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">HOW TO TAKE MEMBERSHIP :</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">On receiving this offer, a prospective study centre should.</span></strong></span></span></span></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Apply with complete details of self, premises, available hardware, plan for business development in the format of the data sheet attached at the end of this offer.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Receipt of the application and data sheet at the controlling office of&nbsp; GLOBAL BRAIN EDUCATION&nbsp; would be followed by personal interview with the Director GLOBAL BRAIN EDUCATION&nbsp; and a visit by a team of GLOBAL BRAIN EDUCATION&nbsp; professional at the prospective centre, if needed.</span></span></span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">ELIGIBILITY CRITERIA FOR GLOBAL BRAIN EDUCATION STUDY CENTRE :</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">The Global Brain Education&nbsp; Study Centre should satisfy the following criteria.</span></strong></span></span></span></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Should be willing to invest required amount of money in setting up a centre with proper infrastructure and main power.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Should have commitment for providing quality training to students.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Should be willing to be a part of the Global Brain Education&nbsp; team in accepting the terms and condition and procedures as laid down by Global Brain Education.</span></span></span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">PROFITABILITY OF OPERATIONS :</span></strong></span></span></span></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The granting of study centre status would be possible after careful study of the market potential, number of students graduation form the relevant streams etc.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The specifics in terms of operational economics will be discussed in person with each of the study centres.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The study centres are required to make a study of the Engineering Colleges, Polytechnics and science college and other institutes of the area by way to the number of students passing out each year.</span></span></span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">EXPECTATION FROM THE AFFILIATED STUDY CENTRE :</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The study centre should be able to have a centre at a prime location of the city/town. The centre would have separate class rooms, Computer Lab and Reception / office room. The centre would have proper ventilation and proper lighting . The block and sub block level centres may not have the above infrastructure but should have generally clean surroundings.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">By way of Equipment and Facilities...........</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Depending on the potential of the area and under consultation with Global Brain Education, the study centre should have or should be in a position to acquire the number of computers, printers, equipment, tools and consumable and the proper software that would be required to effectively convey the course to the students. The study centre should have a well equipped library, housing books as prescribed by the Global Brain Education central coordinating office. Further the study centre shall subscribe to periodicals as suggested and students should have easy access to both books and periodicals.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">In Operations....................</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Each study centre would be provided with a detailed operational manual which provide guidelines to various aspects like.</span></span></span></span></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Internal systems and procedures.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">External Interface.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Co-ordinations.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Purchase of classes and practical.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Examination procedure.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Certificate issue procedures.</span></span></span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:center\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">INFRASTRUCTURE REQUIREMENT FOR GLOBAL BRAIN EDUCATION CENTRE :</span></strong></span></span></span></span></p>\r\n\r\n<div style=\"-webkit-text-stroke-width:0px; padding:0px; text-indent:0px\">\r\n<table cellspacing=\"0\" class=\"Table\" style=\"border-collapse:collapse; border-spacing:0px; border:none; box-sizing:border-box; outline:none; padding:0px; width:1150px\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:1px solid #dddddd; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">S. No.</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:1px solid #dddddd; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">SPECIFICATION</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:1px solid #dddddd; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">METRO CITY</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:1px solid #dddddd; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">NON-METRO CITY</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:1px solid #dddddd; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">TEHSIL</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:1px solid #dddddd; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">VILLAGE</span></strong></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">1</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">a) Area (Sq. Ft.)</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">1500</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">1000-1200</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">800-1000</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">800-1000</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">2</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">b) No. of class rooms</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">2</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">2</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">2</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">2</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">3</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">c) Sitting capacity per class room</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">20</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">20</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">15</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">15</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">4</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">d) No. of Lab rooms</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">1</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">1</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">1</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">1</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">5</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">f) No. Of Systems</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">10</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">8</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">6</span></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">5</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong>&nbsp;</strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">HARDWARE REQUIREMENTS :</span></strong></span></span></span></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">One Pentium server Nodes connected as per Global Brain Education Site Specification.</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Necessary Hardware compatibility for Internet .</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Printer (Dot Matrix /Inkjet).</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">UPS (500 VA) /Generator</span></span></span></span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">A.C. Unit</span></span></span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong>&nbsp;</strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">MANPOWER REQUIREMENT :</span></strong></span></span></span></span></p>\r\n\r\n<div style=\"-webkit-text-stroke-width:0px; padding:0px; text-indent:0px\">\r\n<table cellspacing=\"0\" class=\"Table\" style=\"border-collapse:collapse; border-spacing:0px; border:none; box-sizing:border-box; outline:none; padding:0px; width:1150px\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:1px solid #dddddd; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">Administrator/Manager</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:1px solid #dddddd; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Knowledge of Computer Software Training,Experience, having Good, management Skills.</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">Faculty</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Thorough knowledge of subject, disciplined, Students problem solving capacity.</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">Counsellor/Receptionist</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Pleasent personality with good communication skills, knowledge of computer courses, disciplined.</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">Marketing Executive</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Experienced Hardworking, knowledge of computer courses, good communication skills.</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">Office Boys</span></strong></span></span></span></span></p>\r\n			</td>\r\n			<td style=\"border-bottom:1px solid #dddddd; border-left:none; border-right:1px solid #dddddd; border-top:none; vertical-align:top\">\r\n			<p><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Disciplined &amp; Experience.</span></span></span></span></span></p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n', '0', 0, '', 0),
 (39, '2024-07-10 02:07:38', 'product__17205081437-Practical-examples-of-Business-Processes.png', 'Registration Process', '<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">REGISTRATION PROCEDURE</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<ul>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">To get registered, student have to fill the application form provided along with Information Brochure.</span></span></span></span></span></li>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Students can buy the Information Brochure from any of the Authorised Learning Centre (ALC) and register in any of our RJ DIGITAL Computer Authorised Learning Center.</span></span></span></span></span></li>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">RJ DIGITAL COMPUTER</span><span style=\"font-size:12pt\">&nbsp;provides regular and University courses (only at selected ALCs).</span></span></span></span></span></li>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The ALC name and code are to be mentioned in the application form at the time of admission.</span></span></span></span></span></li>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The total fee has to be paid at the time of registration.</span></span></span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">Enclosures with the application form.</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"font-size:12pt\">Two recent photograph one passport size and one stamp size.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"font-size:12pt\">Attested Photo copy of last educational qualification.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"font-size:12pt\">Category Certificate (ST/SC/Handicapped) to be submitted to get relaxation in the fee as per the&nbsp;M.S. Baijnath&nbsp;fee structure.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\">&nbsp;</span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">COURSE STRUCTURE</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Considering the requirements of the aspirants, courses can be classified into</span></span></span></span></span></p>\r\n\r\n<p style=\"margin-left:72px; text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">(i)&nbsp;</span><span style=\"font-size:12pt\">Certificate courses </span></span></span></span></span></p>\r\n\r\n<p style=\"margin-left:72px; text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">(ii) Diploma/Advance Diploma courses.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Former is basically designed for the beginners where as the latter are for those who aspire to become high quality computer professionals.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">Certificate Courses</span></strong></span></span></span></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">These courses have been specifically designed to meet the current requirements of the IT Industry.</span></span></span></span></span></li>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The Certificate course is basically for the beginners who desire to start their careers in computers.</span></span></span></span></span></li>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">M.S. Baijnath&nbsp;has presented this course with nominal charges so that every section of the society can easily&nbsp;</span></span></span></span></span><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">afford to learn the basics of computer &amp; get benefitted.</span></span></span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:12pt\">Diploma/Advance Diploma Courses</span></strong></span></span></span></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">To prepare a new highly qualified breed of computer professionals &quot;RJ Digital Computer&nbsp;A Unit of RJ Digital computer Pvt. Ltd.&quot; has designed</span></span></span></span></span></li>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">its diploma courses. These courses have been well thought-out to meet the requirements of the fast growing IT industry</span></span></span></span></span>&nbsp;<span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">in which Internet Programming, Advanced Programming, Accountancy, Desk Top Publishing are being covered.</span></span></span></span></span></li>\r\n	<li style=\"text-align: justify;\"><span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">Students can get benefitted from a well premeditated course curriculum that matches the modern industry</span></span></span></span></span>&nbsp;<span style=\"font-family:Georgia,serif\"><span style=\"color:#000000\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">needs and emerges as a well skilled IT professional.</span></span></span></span></span></li>\r\n</ul>\r\n', '0', 0, NULL, 0);
 INSERT INTO `his_page` (`id`, `timestamp`, `page_header`, `page_name`, `content`, `status`, `default_page`, `link`, `redirect`) VALUES
-(40, '2024-07-16 12:24:53', 'product__17211326936656.jpg', 'Examination Process', '<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:16.5pt\">Examination Process</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:10pt\">EXAMINATION</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:16px\">Rj Digital Computer institute i</span><span style=\"font-size:9pt\">s introduced both online and offline examination system. The enrolled students can apply for examination at ALC after completion of course/module.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Examination Types</span></strong></span></span></span></span></p>\r\n\r\n<ul style=\"list-style-type:disc\">\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Single Examination System (SES): For the courses having duration below than Six Months.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Module wise Examination System (MES): For the courses having duration equal to or above than Six Months. The details of the module papers, marks can be collected at your ALC.</span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Examination Procedure</span></strong></span></span></span></span></p>\r\n\r\n<ul style=\"list-style-type:disc\">\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Examination will be conducted all around the year at your Rj Digital computer institute Authorized Learning Center.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">The pattern of exam will be of objective type.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Details i.e. dates of examination, timings/session will be according to the time when the examination form was filled up. A login for 10 days would be open for ALC after filling examination form for the students to commence for the examinations. After that the student has to fill the examination form again with exam fees.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">The duration of examination will be of 90 Minutes.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Theory examinations will comprise of 35 questions of 2 mark each. There is no negative marking.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Practical Exam will carry total 30 Marks, 20 Marks for Lab Practice &amp; 10 Marks for Viva.</span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\">&nbsp;</span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:16.5pt\">Evaluation &amp; Result</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:10pt\">EVALUATION</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The minimum qualifying marks for course/module are as follows -</span></span></span></span></span></p>\r\n\r\n<table align=\"left\" cellspacing=\"0\" class=\"Table\" style=\"-webkit-text-stroke-width:0px; background:#ededed; border-collapse:collapse; border-spacing:0px; border:none; box-sizing:border-box; color:#777777; font-family:Cabin,sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; outline:none; padding:0px; text-align:justify; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-transform:none; white-space:normal; widows:2; width:300px; word-spacing:0px\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><strong><span style=\"font-size:9pt\">Course</span></strong></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><strong><span style=\"font-size:9pt\">Term End Examination</span></strong></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Diploma Course</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">50%</span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Certificate Course</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">50%</span></span></span></p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:10pt\">&middot;</span><br />\r\n<br />\r\n<br />\r\n<strong>&nbsp;</strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">After qualifying all the exams, the students are awarded grades as per their percentage of marks obtained.</span></span></span></span></span></p>\r\n\r\n<table align=\"left\" cellspacing=\"0\" class=\"Table\" style=\"-webkit-text-stroke-width:0px; background:#ededed; border-collapse:collapse; border-spacing:0px; border:none; box-sizing:border-box; color:#777777; font-family:Cabin,sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; outline:none; padding:0px; text-align:justify; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-transform:none; white-space:normal; widows:2; width:300px; word-spacing:0px\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><strong><span style=\"font-size:9pt\">Percentage</span></strong></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><strong><span style=\"font-size:9pt\">Grade</span></strong></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">&gt; = 75% &amp; Over</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">A</span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">&gt; = 65% to &lt; 74%</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000; font-family:Georgia,serif\"><span style=\"font-size:12px\">B</span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">&gt; = 55% to &lt; 64%</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000; font-family:Georgia,serif\"><span style=\"font-size:12px\">C</span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">&gt; = 50% to &lt; 54%</span></span></span></p>\r\n\r\n			<p>&nbsp;</p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000; font-family:Georgia,serif\"><span style=\"font-size:12px\">D</span></span></p>\r\n\r\n			<p>&nbsp;</p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Re Examination</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:9pt\">A student has to secure at least 50% marks in each course/semester to qualify the exam. A student who does not clear the examination in one sitting will be allowed to re-appear in the failed exam. Re-examination fee of Rs 400/- has to be Paid. Students failing to appear in the re-examination within the specific period of time shall not be entitled for the certificate or for further re-examination. Such students are to go through the complete registration procedure to get a re-admission.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:10pt\">RESULT</span></strong><br />\r\n<span style=\"font-size:9pt\">Students can view their result within 30 days of commencement of examination from our website (www.Rjdigitalcomputer.com).</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Certificate/ Marksheet:-</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:9pt\">Certificate / Diploma will be awarded by Rj Digital Computer institute of Education only after the successful completion of the course which will be valid for employment all over India.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Transfer of Centre</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:9pt\">A student can apply for transfer of authorised Digital Computer institute A Unit of Rj Digital Computer institute Pvtl. Ltd centre. The candidate has to send an application stating the place for which transfer has been asked. The application has to be sent to the Head Office duly recommended and forwarded by the centre director (for the transfer form, contact your centre director or can be downloaded from our official website).</span></span></span></span></span></p>\r\n', '0', 0, '', 0),
-(41, '2024-07-17 10:32:21', 'N/A', 'Online Exam', '', '1', 0, 'https://rjdigitalcomputer.com/student_login.php', 1),
+(40, '2024-07-10 02:07:42', 'product__172050815101EPBS_PV Navaneethakrishnan.jpg', 'Examination Process', '<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:16.5pt\">Examination Process</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:10pt\">EXAMINATION</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:16px\">Digital Computer institute i</span><span style=\"font-size:9pt\">s introduced both online and offline examination system. The enrolled students can apply for examination at ALC after completion of course/module.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Examination Types</span></strong></span></span></span></span></p>\r\n\r\n<ul style=\"list-style-type:disc\">\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Single Examination System (SES): For the courses having duration below than Six Months.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Module wise Examination System (MES): For the courses having duration equal to or above than Six Months. The details of the module papers, marks can be collected at your ALC.</span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Examination Procedure</span></strong></span></span></span></span></p>\r\n\r\n<ul style=\"list-style-type:disc\">\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Examination will be conducted all around the year at your Digital computer institute Authorized Learning Center.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">The pattern of exam will be of objective type.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Details i.e. dates of examination, timings/session will be according to the time when the examination form was filled up. A login for 10 days would be open for ALC after filling examination form for the students to commence for the examinations. After that the student has to fill the examination form again with exam fees.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">The duration of examination will be of 90 Minutes.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Theory examinations will comprise of 35 questions of 2 mark each. There is no negative marking.</span></span></span></li>\r\n	<li><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Practical Exam will carry total 30 Marks, 20 Marks for Lab Practice &amp; 10 Marks for Viva.</span></span></span></li>\r\n</ul>\r\n\r\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\">&nbsp;</span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:16.5pt\">Evaluation &amp; Result</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:10pt\">EVALUATION</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">The minimum qualifying marks for course/module are as follows -</span></span></span></span></span></p>\r\n\r\n<table align=\"left\" cellspacing=\"0\" class=\"Table\" style=\"-webkit-text-stroke-width:0px; background:#ededed; border-collapse:collapse; border-spacing:0px; border:none; box-sizing:border-box; color:#777777; font-family:Cabin,sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; outline:none; padding:0px; text-align:justify; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-transform:none; white-space:normal; widows:2; width:300px; word-spacing:0px\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><strong><span style=\"font-size:9pt\">Course</span></strong></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><strong><span style=\"font-size:9pt\">Term End Examination</span></strong></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Diploma Course</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">50%</span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">Certificate Course</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">50%</span></span></span></p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:10pt\">&middot;</span><br />\r\n<br />\r\n<br />\r\n<strong>&nbsp;</strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:12pt\">After qualifying all the exams, the students are awarded grades as per their percentage of marks obtained.</span></span></span></span></span></p>\r\n\r\n<table align=\"left\" cellspacing=\"0\" class=\"Table\" style=\"-webkit-text-stroke-width:0px; background:#ededed; border-collapse:collapse; border-spacing:0px; border:none; box-sizing:border-box; color:#777777; font-family:Cabin,sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; orphans:2; outline:none; padding:0px; text-align:justify; text-decoration-color:initial; text-decoration-style:initial; text-decoration-thickness:initial; text-transform:none; white-space:normal; widows:2; width:300px; word-spacing:0px\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><strong><span style=\"font-size:9pt\">Percentage</span></strong></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><strong><span style=\"font-size:9pt\">Grade</span></strong></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">&gt; = 80%</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">A+</span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">&gt; = 70% to &lt; 80%</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">A</span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">&gt; = 60% to &lt; 70%</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">B</span></span></span></p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">&gt; = 50% to &lt; 60%</span></span></span></p>\r\n			</td>\r\n			<td style=\"background-color:#ededed; border-bottom:none; border-left:none; border-right:none; border-top:none\">\r\n			<p><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:9pt\">C</span></span></span></p>\r\n\r\n			<p>&nbsp;</p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Re Examination</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:9pt\">A student has to secure at least 50% marks in each course/semester to qualify the exam. A student who does not clear the examination in one sitting will be allowed to re-appear in the failed exam. Re-examination fee of Rs 400/- has to be Paid. Students failing to appear in the re-examination within the specific period of time shall not be entitled for the certificate or for further re-examination. Such students are to go through the complete registration procedure to get a re-admission.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:10pt\">RESULT</span></strong><br />\r\n<span style=\"font-size:9pt\">Students can view their result within 30 days of commencement of examination from our website (www.msbaijnath.com).</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Certificate/ Marksheet:-</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:9pt\">Certificate / Diploma will be awarded by Digital computer institute of Education only after the successful completion of the course which will be valid for employment all over India.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><strong><span style=\"font-size:9pt\">Transfer of Centre</span></strong></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"color:#000000\"><span style=\"font-family:Georgia,serif\"><span style=\"font-size:16px\"><span style=\"background-color:#ffffff\"><span style=\"font-size:9pt\">A student can apply for transfer of authorised Digital Computer institute A Unit of Digital computer institute Pvtl. Ltd centre. The candidate has to send an application stating the place for which transfer has been asked. The application has to be sent to the Head Office duly recommended and forwarded by the centre director (for the transfer form, contact your centre director or can be downloaded from our official website).</span></span></span></span></span></p>\r\n', '0', 0, NULL, 0),
+(41, '2024-07-10 01:53:26', 'N/A', 'Online Exam', '', '1', 0, 'https://rjdigitall.webfire.site/student_login.php', 1),
 (42, '2024-07-10 14:15:35', 'N/A', 'Faculty', '', '1', 0, NULL, 0);
 
 -- --------------------------------------------------------
@@ -2131,7 +2002,7 @@ CREATE TABLE `intro` (
 --
 
 INSERT INTO `intro` (`id`, `heading`, `image`, `description`, `btn_link`, `created_at`) VALUES
-(1, 'Hi Welcome to SIHS (An ISO 9001 : 2015 Certified Institute)', 'product__1703936023s.jpg', 'RJDCI welcomes you to the world of Professional Computer Courses, which provides the Competence ability to you in the computer field. If you are a Graduate, Diploma holder or educated person in any stream, knowledge of computer can assure your future. RJDCI is the reputed institution guides you to accomplish your career very successfully with the support of many NGO\'s and well instituted Government Supported Organizations in India. Besides of that, World Association for Online Education supports our institution for web based learning. We invite all to share our vision, goal and purpose to join hands in our effort to build a new cadre of technical professionals, who will accelerate the growth in the new digital era. We wish our students great success in all their endeavors and guest for a better tomorrow, for themselves and for the mankind.', '', '2023-12-10 12:09:50');
+(1, 'Hi Welcome to SIHS (An ISO 9001 : 2015 Certified Institute)', 'product__1703936023s.jpg', 'SIHS welcomes you to the world of Professional Computer Courses, which provides the Competence ability to you in the computer field. If you are a Graduate, Diploma holder or educated person in any stream, knowledge of computer can assure your future. SIHS is the reputed institution guides you to accomplish your career very successfully with the support of many NGO\'s and well instituted Government Supported Organizations inIndia. Besides of that, World Association for Online Education supports our institution for web based learning. We invite all to share our vision, goal and purpose to join hands in our effort to build a new cadre of technical professionals, who will accelerate the growth in the new digital era. We wish our students great success in all their endeavors and guest for a better tomorrow, for themselves and for the mankind.', '', '2023-12-10 12:09:50');
 
 -- --------------------------------------------------------
 
@@ -2183,7 +2054,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `timestamp`, `name`, `username`, `email`, `mobile`, `password`, `type`) VALUES
-(1, '2024-07-28 07:17:36', 'admin', 'rjdcineori', 'admin@gmail.com', '', '3a01b1d7019bf68af985f26bb8f1af41', 'Admin');
+(1, '2024-06-22 17:33:31', 'admin', 'admin', 'admin@gmail.com', '', '21232f297a57a5a743894a0e4a801fc3', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -2248,7 +2119,7 @@ CREATE TABLE `logo_setting` (
 --
 
 INSERT INTO `logo_setting` (`id`, `timestamp`, `logo`, `take_test`, `favicon`) VALUES
-(1, '2024-07-23 11:05:04', 'product__1721732704565656.jpg', 'product__1670660213bb.jpg', 'product__1721474735NEW_LOGO-removebg-preview.png');
+(1, '2024-06-30 02:47:05', 'product__1719715616IMG-20240630-WA0003.jpg', 'product__1670660213bb.jpg', 'product__1719715625IMG-20240630-WA0003.jpg');
 
 -- --------------------------------------------------------
 
@@ -2590,12 +2461,10 @@ CREATE TABLE `site_courses` (
 --
 
 INSERT INTO `site_courses` (`id`, `timestamp`, `title`, `eligibility`, `duration`, `content`) VALUES
-(9, '2024-07-17 12:16:36', 'DIPLOMA COURSE', '10 th/ 12 th PASS', '1 YEAR', ''),
+(9, '2024-06-25 11:19:43', 'DIPLOMA COURSE', '10 Th PASS', '1 YEAR', ''),
 (10, '2024-06-25 11:17:20', 'FINANCIAL ACCOUNTING', '10 Th PASS', '1 YEAR', ''),
 (11, '2024-06-25 11:18:49', 'WEB DESIGNING COURSE', '10 Th PASS', '1 YEAR', ''),
-(14, '2024-07-26 11:09:37', 'PROGRAMMING', '10 th/ 12 th PASS', '6 MONTH', ''),
-(15, '2024-07-26 11:19:57', 'AUTO CAD', '10 th/ 12 th PASS', '12 MONTH', ''),
-(16, '2024-07-26 11:25:38', 'NETWORKING', '12 th PASS', '12 MONTH', '');
+(12, '2024-07-06 01:35:31', 'New Course ', '12th Pass ', '1 Year ', '');
 
 -- --------------------------------------------------------
 
@@ -2631,10 +2500,8 @@ CREATE TABLE `sliders` (
 INSERT INTO `sliders` (`id`, `timestamp`, `image`, `content`, `type`) VALUES
 (79, '2024-06-25 07:26:27', 'slider__1719300387computer-and-technology-training-1-.jpg', '', 'main'),
 (80, '2024-06-25 07:26:55', 'slider__1719300415istockphoto-164548944-612x612.jpg', '', 'main'),
-(91, '2024-07-15 10:47:47', 'slider__17210404672329', '', 'secondary'),
-(92, '2024-07-15 10:50:04', 'slider__17210406045692', '', 'secondary'),
-(93, '2024-07-15 11:01:05', 'slider__17210412653924', '', 'secondary'),
-(94, '2024-07-16 05:51:14', 'slider__17211090745805', '', 'secondary');
+(82, '2024-07-10 14:10:59', 'slider__1720620659WhatsApp Image 2024-07-09 at 3.38.27 PM.jpeg', '', 'secondary'),
+(83, '2024-07-10 14:11:27', 'slider__1720620687WhatsApp Image 2024-07-09 at 3.38.28 PM.jpeg', '', 'main');
 
 -- --------------------------------------------------------
 
@@ -2658,7 +2525,7 @@ CREATE TABLE `social_links` (
 --
 
 INSERT INTO `social_links` (`id`, `header_mobile`, `header_email`, `header_facebook`, `header_twitter`, `header_instagram`, `header_linkedin`, `header_youtube`) VALUES
-(1, '+91 7309058150,+91 7087524083', 'rjdigitalcomputer@gmail.com', '', '', '', '', '');
+(1, '+91 7309058150', 'rjdigitalcomputer@gmail.com', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2761,23 +2628,8 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `timestamp`, `reg_date`, `enrollment_no`, `name`, `gender`, `father`, `mother`, `dob`, `mobile`, `email`, `state`, `distric`, `address3`, `address1`, `address2`, `year`, `username`, `password`, `course_id`, `center_id`, `photo`, `status`, `dur_start`, `dur_ends`, `is_deleted`, `categary`, `sign`, `thumb`, `pincode`, `adhar`, `session`, `qualification`, `p_year`) VALUES
-(21, '2024-07-16 10:30:41', '2023-01-10', 'RJDCI/006', 'PRITI', 'Male', 'RAMASHANKAR', 'PREMA DEVI', '2006-08-07', '9554371140', 'rjdigitalcomputer@gmail.com', '1', '29', 'BASKHARI', 'KASDAHA', 'KAUDAHI', '2022', 'Digital@123', 'Digital@123', '9', '3', 'student__66964c3853877.jpg', '1', '2023-01-10', '2024-01-12', '0', 'OBC', 'student__66964c385393b.jpg', 'student__66964c3853956.jpg', '224129', '747793663872', '2023-2024', 'High School ', '2022'),
-(22, '2024-07-16 10:40:13', '2023-01-11', 'RJDCI/007', 'POOJA YADAV', 'Male', 'RAM KOMAL YADAV', 'CHANDRAWATI DEVI', '2006-05-08', '7022180774', 'rjdigitalcomputer@gmail.com', '1', '29', 'AALAPUR', 'AMADARWESPUR', 'AMADARWESPUR', '2022', 'Digital@123', 'Digital@123', '9', '3', 'student__66964e4d535c9.jpg', '1', '2023-01-11', '2024-01-12', '0', 'OBC', 'student__66964e4d5364a.jpg', 'student__66964e4d53661.jpg', '224181', '248215414137', '2023-2024', 'High School ', '2022'),
-(23, '2024-07-16 10:46:38', '2023-01-12', 'RJDCI/008', 'ANCHAL', 'Male', 'SABHAPATI YADAV', 'USHA DEVI', '2006-02-01', '9838587231', 'rjdigitalcomputer@gmail.com', '1', '29', 'BASKHARI', 'KASDAHA', 'KAUDAHI', '2022', 'Digital@123', 'Digital@123', '9', '3', 'student__66964fce71464.jpg', '1', '2023-01-12', '2024-01-13', '0', 'OBC', 'student__66964fce714d1.jpg', 'student__66964fce714eb.jpg', '224129', '604040304579', '2023-2024', 'High School ', '2022'),
-(27, '2024-07-18 12:26:02', '2023-01-23', 'RJDCI/014', 'SHYAMU GAUR', 'Male', 'DINESH GAUR', 'SHANTI', '2002-08-08', '8320428318', 'rjdigitalcomputer@gmail.com', '1', '29', 'KATKA', 'BILARI', 'DULHUPUR ', '2020', 'Digital@123', 'Digital@123', '9', '3', 'student__66990a8e67002.jpg', '1', '2023-01-23', '2024-01-25', '0', 'OBC', 'student__66990a8e67115.jpg', 'student__66990a8e67322.jpg', '224139', '948237763350', '2023-2024', 'High School ', '2020'),
-(28, '2024-07-19 08:11:49', '2023-01-04', 'RJDCI/002', 'PANKAJ KUMAR', 'Male', 'MOTILAL', 'GYANMATI', '2005-03-11', '9198319551', 'rjdigitalcomputer@gmail.com', '1', '33', 'ATRAULIA', 'LOHRA', 'LOHRA', '2020', 'Digital@123', 'Digital@123', '12', '3', 'student__669a2000aa4d5.jpeg', '1', '2023-01-04', '2024-03-06', '0', 'SC', 'student__669a2000aa54e.jpeg', 'student__669a2000aa56f.jpeg', '223223', '882620076442', '2023-2024', 'High School Below', '2020'),
-(30, '2024-07-22 10:01:56', '2023-01-14', 'RJDCI/009', 'SHIVANGI', 'Male', 'ACHCHHELAL', 'PUSHPA', '2003-06-07', '8317008240', 'rjdigitalcomputer@gmail.com', '1', '33', 'ATRAULIA', 'LOHRA', 'LOHRA', '2021', '', '', '9', '3', 'student__669e2e99b20fc.jpg', '1', '2023-01-14', '2024-01-16', '0', 'SC', 'student__669e2e99b21b0.jpg', 'student__669e2e99b21da.jpg', '223223', '453510912426', '2023-2024', 'High School ', '2021'),
-(31, '2024-07-22 10:17:11', '2023-01-15', 'RJDCI/010', 'PRAVESH', 'Male', 'RAM POOJAN', 'URMILA', '2004-08-04', '9517349593', 'rjdigitalcomputer@gmail.com', '1', '29', 'KATKA', 'RAJAPUR MAHOWAL', 'SAIDAHI', '2020', '', '', '9', '3', 'student__669e31fd21e60.jpg', '1', '2023-01-15', '2024-01-17', '0', 'OBC', 'student__669e31fd21f08.jpg', 'student__669e31fd21f28.jpg', '224183', '760232004307', '2023-2024', 'High School ', '2020'),
-(33, '2024-07-22 10:45:48', '2023-01-18', 'RJDCI/011', 'VISHAL NISHAD', 'Male', 'JAGDEESH NISHAD', 'GYANMATI', '2003-08-06', '8175888609', 'rjdigitalcomputer@gmail.com', '1', '29', 'KATKA', 'RATANA', 'RATANA', '2020', '', '', '9', '3', 'student__669e38c726e43.jpg', '1', '2023-01-18', '2024-01-20', '0', 'OBC', 'student__669e38c726edd.jpg', 'student__669e38c726eff.jpg', '224125', '684220070005', '2023-2024', 'High School ', '2020'),
-(34, '2024-07-22 10:59:28', '2023-01-20', 'RJDCI/012', 'SUDHEER', 'Male', 'MANGLA PRASAD', 'KAUSA DEVI', '2005-07-16', '9519904762', 'rjdigitalcomputer@gmail.com', '1', '29', 'BASKHARI', 'SHAHPUR MAHMOODPUR', 'NEWARE', '2021', '', '', '9', '3', 'student__669e3c78328dd.jpg', '1', '2023-01-20', '2024-01-22', '0', 'SC', 'student__669e3c783299e.jpg', 'student__669e3c78329ba.jpg', '224139', '417591493646', '2023-2024', 'High School ', '2021'),
-(35, '2024-07-22 11:12:57', '2023-01-21', 'RJDCI/013', 'SACHIN ', 'Male', 'OM PRAKASH', 'ARTI DEVI', '2007-09-05', '8858180473', 'rjdigitalcomputer@gmail.com', '1', '29', 'ALAPUR', 'SHIV TARA', 'SHIV TARA', '2023', '', '', '9', '3', 'student__669e3f2f1f4d9.jpg', '1', '2023-01-21', '2024-01-23', '0', 'OBC', 'student__669e3f2f2223e.jpg', 'student__669e3f2f22291.jpg', '224129', '404995707478', '2023-2024', 'High School ', '2023'),
-(36, '2024-07-22 11:25:10', '2023-01-24', 'RJDCI/015', 'GULSHAN KUMAR', 'Male', 'SADAVRIJ', 'URMILA', '2004-05-12', '7800131586', 'rjdigitalcomputer@gmail.com', '1', '29', 'BASKHARI', 'BHOJPUR', 'NEWARE', '2021', '', '', '9', '3', 'student__669e41f67c3e4.jpg', '1', '2023-01-24', '2024-01-26', '0', 'SC', 'student__669e41f67c470.jpg', 'student__669e41f67c48f.jpg', '224139', '249799080180', '2023-2024', 'High School ', '2021'),
-(37, '2024-07-22 11:43:56', '2023-01-25', 'RJDCI/016', 'ABDUL KADIR ZILANI', 'Male', 'MOHD SAGEER QAZI', 'SABEENA KHATOON', '2008-06-15', '8707861393', 'rjdigitalcomputer@gmail.com', '1', '29', 'KATKA', 'NEWARI', 'DULHUPUR ', '2023', '', '', '9', '3', 'student__669e46419cccd.jpg', '1', '2023-01-25', '2024-01-27', '0', 'OBC', 'student__669e46419de8e.jpg', 'student__669e46419df1f.jpg', '224139', '988787646764', '2023-2024', 'High School ', '2023'),
-(38, '2024-07-22 12:48:52', '2023-01-26', 'RJDCI/017', 'SHIVAM', 'Male', 'RADHESHYAM', 'UMA', '2009-01-01', '8127074200', 'rjdigitalcomputer@gmail.com', '1', '33', 'ATRAULIA', 'LOHRA', 'LOHRA', '2024', '', '', '9', '3', 'student__669e557b12883.jpg', '1', '2023-01-26', '2024-01-28', '0', 'SC', 'student__669e557b1293d.jpg', 'student__669e557b1296f.jpg', '223223', '902622786251', '2023-2024', 'High School ', '2024'),
-(39, '2024-07-23 09:40:43', '2023-01-27', 'RJDCI/018', 'GOPAL PANDEY', 'Male', 'VIVEK KUMAR PANDEY', 'REETA PANDEY', '2005-07-01', '9569426069', 'rjdigitalcomputer@gmail.com', '1', '29', 'KATKA', 'GAUSPUR', 'PINDORIA', '2020', '', '', '9', '3', 'student__669f7b69b251f.jpg', '1', '2023-01-27', '2024-01-29', '0', 'General', 'student__669f7b69b25da.jpg', 'student__669f7b69b25f7.jpg', '224139', '524479608611', '2023-2024', 'High School ', '2020'),
-(40, '2024-07-23 09:50:26', '2023-01-28', 'RJDCI/019', 'SURYA PRATAP', 'Male', 'RAJENDRA PRASAD', 'DURGAWATI', '2006-07-10', '9569855110', 'rjdigitalcomputer@gmail.com', '1', '33', 'ATRAULIA', 'MAHANGUPUR DHAHAR', 'MAHANGUPUR DHAHAR', '2021', '', '', '9', '3', 'student__669f7d29d25f0.jpg', '1', '2023-01-28', '2024-01-30', '0', 'General', 'student__669f7d29d26cf.jpg', 'student__669f7d29d26f6.jpg', '223223', '967222963275', '2023-2024', 'High School ', '2021'),
-(44, '2024-07-26 05:37:48', '2023-01-29', 'RJDCI/020', 'HEMANT TRIPAHTI', 'Male', 'UMA NATH TRIPATHI', 'NEELAM TRIPATHI', '1999-12-30', '9651394500', 'rjdigitalcomputer@gmail.com', '1', '29', 'JALALPUR', 'MATHURA RASOOLPUR', 'MATHURA RASOOLPUR', '2015', '', '', '9', '3', 'photo_66a3362cb768b.jpg', '1', '2023-01-29', '2024-01-31', '0', 'General', 'sign_66a3362cb7acf.jpg', 'thumb_66a3362cb7af7.jpg', '224139', '657927168332', '2023-2024', 'High School ', '2015'),
-(46, '2024-07-30 06:19:34', '2023-01-08', 'RJDCI/005', 'SHIVANI GAUD', 'Male', 'RAM MILAN GAUD', 'PREM SHEETA GAUD', '2002-05-15', '8948072058', 'rjdigitalcomputer@gmail.com', '1', '33', 'MAHARAJGANJ', 'USURKUDHWA', 'MAHARAJGANJ', '2019', '', '', '9', '3', 'photo_66a885f63d065.jpg', '1', '2023-01-08', '2024-01-10', '0', 'OBC', 'sign_66a885f63d479.jpg', 'thumb_66a885f63d6ea.jpg', '276137', '708291910307', '2023-2024', 'High School ', '2019');
+(14, '2024-07-06 04:11:39', '2023-01-01', 'RJDCI/001', 'SANTOSH KUMAR', 'Male', 'RAJDHARI', 'JIYANA DEI', '2000-07-15', '7309058150', 'santoshji612824@gmail.com', '1', '33', 'HATHIPUR', 'HATHIPUR', 'HATHIPUR', '', '1234', '1234', '12', '3', 'student__66891b8a9ce18.png', '1', '2023-01-01', '2024-01-02', '0', 'SC/ST ', 'student__668b4fabdafbc.jpg', 'student__668b4fabdb04c.jpg', '223223', '3192506827521', '2023-2024', 'Post Graduate', NULL),
+(15, '2024-07-07 18:29:23', '2024-07-07', '1501709', 'abhishek', 'Male', 'father', 'mother', '2024-07-07', '123456789', '6395609995@gmail.com', '1', '1', 'address2', 'address1', 'address2', '', '', '', '9', '3', 'product__668ade836a8b6.png', '0', '', '', '0', 'OBC', 'product__668ade836ad13.png', 'product__668ade836ad56.png', '283203', '09876543212345', '2022', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2903,45 +2755,8 @@ INSERT INTO `subjects` (`id`, `timestamp`, `course_id`, `subject_name`, `max_mar
 (34, '2024-06-29 06:14:56', '12', '(14) Computer G.K.', '100', '50', ''),
 (35, '2024-06-29 06:15:34', '12', '(15) Practical', '100', '50', ''),
 (36, '2024-06-29 06:16:20', '12', '(16) Personality Development.', '100', '50', ''),
-(48, '2024-07-13 07:13:12', '9', '1) COMPUTER BASIC & FUNDAMENTAL', '100', '50', ''),
-(49, '2024-07-13 07:14:53', '9', '(2). OPERATING  SYSTEM  (A). MS DOS  (B). MS WINDOWS', '100', '50', ''),
-(50, '2024-07-13 07:16:22', '9', '(3). MICROSOFT OFFICE  (A). WORD  (B). EXCEL  (C). POWER POINT', '100', '50', ''),
-(51, '2024-07-13 07:18:15', '9', '(4). INTERNET', '100', '50', ''),
-(53, '2024-07-13 07:21:52', '9', '(5). PROFESSIONAL ACCOUNTING', '100', '50', ''),
-(54, '2024-07-13 07:22:26', '9', '(6). COMPUTERISED ACCOUNTING (TALLY)', '100', '50', ''),
-(55, '2024-07-13 07:23:39', '9', '(7). BUSY', '100', '50', ''),
-(56, '2024-07-13 07:38:52', '9', '(8). ACCOUNTING PLUS', '100', '50', ''),
-(57, '2024-07-13 07:40:19', '9', '(9). MARG SOFTWARE', '100', '50', ''),
-(58, '2024-07-13 07:44:03', '9', '(10). HTML ', '100', '50', ''),
-(59, '2024-07-13 07:45:42', '9', '(11). DTP ( PAGE MAKER, PHOTOSHOP, CORELDRAW )', '100', '50', ''),
-(60, '2024-07-13 07:46:26', '9', '(12). HINDI TYPING', '100', '50', ''),
-(61, '2024-07-13 07:46:58', '9', '(13). ENGLISH TYPING', '100', '50', ''),
-(62, '2024-07-13 07:47:26', '9', '(14). COMPUTER G.K.', '100', '50', ''),
-(63, '2024-07-13 07:48:04', '9', '(15). PRACTICAL', '100', '50', ''),
-(64, '2024-07-13 07:49:04', '9', '(16). PERSONALITY  DEVELOPMENT .', '100', '50', ''),
-(80, '2024-07-27 11:14:28', '16', '(1).COMPUTER BASIC & FUNDAMENTAL', '100', '50', ''),
-(81, '2024-07-27 11:15:02', '16', '(2).INTERNET', '100', '50', ''),
-(82, '2024-07-27 11:16:01', '16', '(3).FINANCIAL ACCOUNTING', '100', '50', ''),
-(83, '2024-07-27 11:16:55', '16', '(4).COMPUTERISED ACCOUNTING (TALLY)', '100', '50', ''),
-(84, '2024-07-27 11:18:09', '16', '(5).BUSY SOFTWARE', '100', '50', ''),
-(85, '2024-07-27 11:18:55', '16', '(6).MARG SOFTWARE', '100', '50', ''),
-(86, '2024-07-27 11:19:32', '16', '(7).ACCOUNTING PLUS SOFTWARE', '100', '50', ''),
-(87, '2024-07-27 11:21:27', '16', '(8).ALL TAXES (VAT,GST)', '100', '50', ''),
-(88, '2024-07-27 11:22:22', '16', '(9).PRACTICAL', '100', '50', ''),
-(89, '2024-07-27 11:26:44', '23', '(1).COMPUTER FUNDAMENTAL', '100', '50', ''),
-(90, '2024-07-27 11:27:44', '23', '(2).PAINT, NOTEPAD, WORDPAD, WINDOWS', '100', '50', ''),
-(91, '2024-07-27 11:28:55', '23', '(3).ENGLISH TYPING & HINDI TYPING', '100', '50', ''),
-(92, '2024-07-27 11:30:45', '23', '(4).MICROSOFT OFFICE (A).WORD   (B).EXCEL  (C).POWER POINT', '100', '50', ''),
-(93, '2024-07-27 11:40:00', '23', '(5).NETWORK, INTERNET, E-MAIL & MULTIMEDIA', '100', '50', ''),
-(94, '2024-07-27 11:42:44', '23', '(6).FINANCIAL ACCOUNTING & TAXATION', '100', '50', ''),
-(95, '2024-07-27 11:43:56', '23', '(7).COMPUTERISED ACCOUNTING (TALLY) WITH GST', '100', '50', ''),
-(96, '2024-07-27 11:44:37', '23', '(8).PRACTICAL', '100', '50', ''),
-(97, '2024-07-27 11:57:03', '24', '(1).COMPUTER BASIC & FUNDAMENTAL', '100', '50', ''),
-(98, '2024-07-27 11:58:01', '24', '(2).OPERATING SYSTEM (A).MS WINDOWS', '100', '50', ''),
-(99, '2024-07-27 11:59:02', '24', '(3). MICROSOFT OFFICE (A). WORD (B). EXCEL (C). POWER POINT', '100', '50', ''),
-(100, '2024-07-27 12:01:15', '24', '(4).INTERNET, E-MAIL & MULTIMEDIA', '100', '50', ''),
-(101, '2024-07-27 12:03:16', '24', '(5).ENGLISH TYPING', '100', '50', ''),
-(102, '2024-07-27 12:03:55', '24', '(6).PRACTICAL', '100', '50', '');
+(37, '2024-07-06 01:36:45', '13', 'Check 1', '70', '50', ''),
+(38, '2024-07-06 01:37:32', '13', 'Check 2', '70', '55', '');
 
 -- --------------------------------------------------------
 
@@ -3133,6 +2948,33 @@ CREATE TABLE `why_join` (
   `title` varchar(1000) NOT NULL,
   `content` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `winner_certificate`
+--
+
+CREATE TABLE `winner_certificate` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `father` varchar(100) NOT NULL,
+  `center_id` int(11) NOT NULL,
+  `enrollment_no` varchar(100) NOT NULL,
+  `grade` varchar(50) NOT NULL,
+  `issue_date` date NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `status` enum('draft','active','cancel') NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `winner_certificate`
+--
+
+INSERT INTO `winner_certificate` (`id`, `name`, `father`, `center_id`, `enrollment_no`, `grade`, `issue_date`, `image`, `status`, `created_at`, `updated_at`) VALUES
+(5, 'SHANI KUMAR', 'RAJDHARI', 3, 'RJDCI/W/002', 'WINNER', '2024-08-18', 'product__1723993301images.jpeg', 'active', '2024-08-18 15:01:41', '2024-08-18 15:11:56');
 
 --
 -- Indexes for dumped tables
@@ -3523,6 +3365,12 @@ ALTER TABLE `why_join`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `winner_certificate`
+--
+ALTER TABLE `winner_certificate`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -3530,7 +3378,7 @@ ALTER TABLE `why_join`
 -- AUTO_INCREMENT for table `admit_card`
 --
 ALTER TABLE `admit_card`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `amount`
@@ -3548,19 +3396,19 @@ ALTER TABLE `assignment`
 -- AUTO_INCREMENT for table `centers`
 --
 ALTER TABLE `centers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `certificates`
 --
 ALTER TABLE `certificates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `check_session`
 --
 ALTER TABLE `check_session`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=850;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=727;
 
 --
 -- AUTO_INCREMENT for table `city`
@@ -3584,7 +3432,7 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `crousel`
@@ -3596,25 +3444,25 @@ ALTER TABLE `crousel`
 -- AUTO_INCREMENT for table `exams`
 --
 ALTER TABLE `exams`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `exams_by_students`
 --
 ALTER TABLE `exams_by_students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `exam_questions`
 --
 ALTER TABLE `exam_questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `exam_question_answers_list`
 --
 ALTER TABLE `exam_question_answers_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `fee_collection`
@@ -3638,7 +3486,7 @@ ALTER TABLE `franchisee_transections`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `gallery_category`
@@ -3806,7 +3654,7 @@ ALTER TABLE `set_menu`
 -- AUTO_INCREMENT for table `site_courses`
 --
 ALTER TABLE `site_courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `site_manager`
@@ -3818,7 +3666,7 @@ ALTER TABLE `site_manager`
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- AUTO_INCREMENT for table `social_links`
@@ -3836,7 +3684,7 @@ ALTER TABLE `states`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `students_transections`
@@ -3866,7 +3714,7 @@ ALTER TABLE `study_material`
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `tbl_wallet`
@@ -3909,6 +3757,12 @@ ALTER TABLE `web_schema`
 --
 ALTER TABLE `why_join`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `winner_certificate`
+--
+ALTER TABLE `winner_certificate`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
