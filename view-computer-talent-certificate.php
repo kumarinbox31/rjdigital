@@ -167,17 +167,19 @@ $center->getById();
             top: -18rem;
             width: 22rem;
             text-align: center;
+            text-decoration: underline;
         }
         #assistant_manager{
             top: -18rem;
             right:0;
             width: 18rem;
             text-align: center;
+            text-decoration: underline;
         }
         #institute_name{
             color: #b4555d;
-            top: -8.8rem;
-            font-size: 16px;
+            top: -9rem;
+            font-size: 22px;
             font-weight: bold;
             left: 3rem;
             text-decoration: underline;
@@ -185,13 +187,13 @@ $center->getById();
         }
         #address{
             top: -6.3rem;
-            font-size: 0.8rem;
+            font-size: 1rem;
             left: 3.2rem;
             font-weight: 300;
         }
         #reg_no{
             top: -5.3rem;
-            font-size: 0.8rem;
+            font-size: 1rem;
             left: 3.2rem;
             font-weight: 300;
         }
@@ -209,7 +211,7 @@ $center->getById();
                 <h4 id="college_name"><?php echo htmlspecialchars($talent->college_name); ?></h4>
                 <h4 id="branch_head"><?php echo htmlspecialchars($center->name); ?></h4>
                 <h4 id="assistant_manager"><?php echo htmlspecialchars($center->assistant_manager); ?></h4>
-                <h4 id="institute_name">|| <?php echo htmlspecialchars($center->institute_name); ?></h4>
+                <h4 id="institute_name"><?php echo htmlspecialchars($center->institute_name); ?></h4>
                 <p id="address"><?php echo htmlspecialchars($center->center_full_address); ?></p>
                 <p id="reg_no">Reg. No. <?php echo htmlspecialchars($center->reg_no); ?></p>
             </div>
