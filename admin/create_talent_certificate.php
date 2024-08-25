@@ -55,7 +55,13 @@ if(isset($_GET['action'])){
     }
 }
 ?>
-<div class="container">
+<style>
+    .required::after{
+        content:' *';
+        color:red;
+    }
+</style>
+<div class="">
     <h3 class="text-center text-success text-bold">Computer Tenant Certificate</h3>
     <hr>
     <div class="row">
@@ -65,8 +71,9 @@ if(isset($_GET['action'])){
                     <div class="panel-heading bg-primary text-white">Create Certificate</div>
                     <div class="panel-body">
                         <div class="form-group">
-                            <label>Center</label>
-                            <select class="form-control" name="center_id">
+                            <label class="required">Center</label>
+                            <a target="_blank" href="create_center.php" class="btn btn-sm btn-primary" style="margin-top:-10px;float:right;">Add New</a>
+                            <select class="form-control" name="center_id" required>
                                 <option value="">Select Center</option>
                                 <?php
                                 $get = $con->query("SELECT * FROM centers");
@@ -77,20 +84,20 @@ if(isset($_GET['action'])){
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Name</label>
-                            <input name="name" class="form-control" placeholder="Enter name">
+                            <label class="required">Name</label>
+                            <input name="name" class="form-control" placeholder="Enter name" required>
                         </div>
                         <div class="form-group">
-                            <label>Class</label>
-                            <input name="class" class="form-control" placeholder="Enter class">
+                            <label class="required">Class</label>
+                            <input name="class" class="form-control" placeholder="Enter class" required>
                         </div>
                         <div class="form-group">
-                            <label>Session</label>
-                            <input name="session" class="form-control" placeholder="Enter session">
+                            <label class="required">Session</label>
+                            <input name="session" class="form-control" placeholder="Enter session" required>
                         </div>
                         <div class="form-group">
-                            <label>College Name</label>
-                            <input name="college_name" class="form-control" placeholder="Enter college name">
+                            <label class="required">College Name</label>
+                            <input name="college_name" class="form-control" placeholder="Enter college name" required>
                         </div>
 
                     </div>
@@ -156,7 +163,7 @@ if(isset($_GET['action'])){
                                     echo '<td>' . htmlspecialchars($record['college_name']) . '</td>';
                                     echo '<td>' . $status. '</td>';
                                     echo '<td>
-                                    <a href="../view-computer-talent-certificate.php?id=' . intval($record['id']) . '" class="btn btn-sm btn-info">View</a> | 
+                                    <a target="_blank" href="../view-computer-talent-certificate.php?id=' . intval($record['id']) . '" class="btn btn-sm btn-info">View</a> | 
                                     <a href="?action=del&id=' . intval($record['id']) . '" 
                                     onclick="return confirm(\'Are you sure?\')" class="btn btn-danger btn-sm">Delete</a></td>';
                                     echo '</tr>';

@@ -1,6 +1,7 @@
 <?php
 require_once 'admin/includes/config.php';
 require_once 'admin/includes/models/computer_talent_certificate.php';
+require_once 'admin/includes/models/center.php';
 $talent = new ComputerTalentCertificate($con);
 $id = intval($_GET['id']);
 $talent->id = $id;
@@ -10,6 +11,9 @@ if ($talent->getById() == null) {
 if($talent->status == 0){
     echo '<script>alert("Certificate not Approved yet.");window.location.href="admin/create_talent_certificate.php";</script>';
 }
+$center = new Centers($con);
+$center->id = $talent->center_id;
+$center->getById();
 ?>
 <!doctype html>
 <html lang="en">
@@ -159,6 +163,38 @@ if($talent->status == 0){
             width: 31rem;
             text-align: center;
         }
+        #branch_head{
+            top: -18rem;
+            width: 22rem;
+            text-align: center;
+        }
+        #assistant_manager{
+            top: -18rem;
+            right:0;
+            width: 18rem;
+            text-align: center;
+        }
+        #institute_name{
+            color: #b4555d;
+            top: -8.8rem;
+            font-size: 16px;
+            font-weight: bold;
+            left: 3rem;
+            text-decoration: underline;
+            font-weight:bold;
+        }
+        #address{
+            top: -6.3rem;
+            font-size: 0.8rem;
+            left: 3.2rem;
+            font-weight: 300;
+        }
+        #reg_no{
+            top: -5.3rem;
+            font-size: 0.8rem;
+            left: 3.2rem;
+            font-weight: 300;
+        }
     </style>
 </head>
 
@@ -167,19 +203,15 @@ if($talent->status == 0){
         <div class="content-wrapper">
             <img src="format/computer_talent_certificate.jpg">
             <div class="text-wrapper">
-                <h3 id="name"><?php echo $talent->name; ?></h3>
-                <h4 id="class"><?php echo $talent->class; ?></h4>
-                <h4 id="session"><?php echo $talent->session; ?></h4>
-                <h4 id="college_name"><?php echo $talent->college_name; ?></h4>
-                <?php
-                // $data = "Enrollment No: " . $enroll_no . "\nName: " . $name . "\nFather's Name: " . $father . "\nMother's Name: " . $mother . "\nDate of Birth: " ;
-                // $data = BASE_URL . "view-certificate.php?certificate-no=$certificate_no";
-                // ob_start();
-                // QRcode::png($data, null, QR_ECLEVEL_L, 10, 1);
-                // $image_data = ob_get_contents();
-                // ob_end_clean();
-                // echo '<img src="data:image/png;base64,' . base64_encode($image_data) . '" alt="QR Code" style="height: 6rem; width: 6rem; top: -20.5rem; left: 3.2rem; border: 1px solid black;">';
-                ?>
+                <h3 id="name"><?php echo htmlspecialchars($talent->name); ?></h3>
+                <h4 id="class"><?php echo htmlspecialchars($talent->class); ?></h4>
+                <h4 id="session"><?php echo htmlspecialchars($talent->session); ?></h4>
+                <h4 id="college_name"><?php echo htmlspecialchars($talent->college_name); ?></h4>
+                <h4 id="branch_head"><?php echo htmlspecialchars($center->name); ?></h4>
+                <h4 id="assistant_manager"><?php echo htmlspecialchars($center->assistant_manager); ?></h4>
+                <h4 id="institute_name">|| <?php echo htmlspecialchars($center->institute_name); ?></h4>
+                <p id="address"><?php echo htmlspecialchars($center->center_full_address); ?></p>
+                <p id="reg_no">Reg. No. <?php echo htmlspecialchars($center->reg_no); ?></p>
             </div>
         </div>
     </page>

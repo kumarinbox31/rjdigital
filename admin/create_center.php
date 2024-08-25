@@ -10,6 +10,8 @@ if ($_POST['status'] == 'insert') {
         if ($img['status']) {
             // Escape all the values using mysqli_real_escape_string to prevent SQL injection
             $name = mysqli_real_escape_string($con, $_POST['name']);
+            $assistant_manager = mysqli_real_escape_string($con, $_POST['assistant_manager']);
+            $reg_no = mysqli_real_escape_string($con, $_POST['reg_no']);
             $institute_name = mysqli_real_escape_string($con, $_POST['institute_name']);
             $dob = mysqli_real_escape_string($con, $_POST['dob']);
             $pan_number = mysqli_real_escape_string($con, $_POST['pan_number']);
@@ -23,7 +25,16 @@ if ($_POST['status'] == 'insert') {
             $username = mysqli_real_escape_string($con, $_POST['username']);
             $password = mysqli_real_escape_string($con, $_POST['password']);
             
-            $query = "INSERT INTO `centers` (`id`, `timestamp`, `center_number`, `name`, `institute_name`, `dob`, `pan_number`, `aadhar_number`, `center_full_address`,`pincode`, `state_id`, `city_id`, `no_of_computer_operator`, `no_of_class_room`, `total_computer`, `space_of_computer_center`, `whatsapp_number`, `contact_number`, `email_id`, `qualification_of_center_head`, `staff_room`, `water_supply`, `toilet`, `reception`, `username`, `password`, `transection_id`, `status`, `image`) VALUES (NULL, CURRENT_TIMESTAMP, '" . time() . "', '$name', '$institute_name', '$dob', '$pan_number', '$aadhar_number', '$center_full_address','$pincode', '" . $_POST['state_id'] . "', '" . $_POST['city_id'] . "', '" . $_POST['no_of_computer_operator'] . "', '" . $_POST['no_of_class_room'] . "', '" . $_POST['total_computer'] . "', '" . $_POST['space_of_computer_center'] . "', '$whatsapp_number', '" . $_POST['contact_number'] . "', '$email_id', '$qualification_of_center_head', '" . $_POST['staff_room'] . "', '" . $_POST['water_supply'] . "', '" . $_POST['toilet'] . "', '$reception', '$username', '$password', '', '1', '$img[file_name]')";
+            $query = "INSERT INTO `centers` 
+			(`id`, `timestamp`, `center_number`, `name`, `institute_name`, `dob`, `pan_number`, 
+			`aadhar_number`, `center_full_address`,`pincode`, `state_id`, `city_id`, 
+			`no_of_computer_operator`, `no_of_class_room`, `total_computer`, `space_of_computer_center`, 
+			`whatsapp_number`, `contact_number`, `email_id`, `qualification_of_center_head`, `staff_room`, 
+			`water_supply`, `toilet`, `reception`, `username`, `password`, `transection_id`,
+			 `status`, `image`,`assistant_manager`,`reg_no`) VALUES 
+			(NULL, CURRENT_TIMESTAMP, '" . time() . "', '$name', '$institute_name', '$dob', '$pan_number', '$aadhar_number', '$center_full_address','$pincode', '" . $_POST['state_id'] . "', '" . $_POST['city_id'] . "', '" . $_POST['no_of_computer_operator'] . "', '" . $_POST['no_of_class_room'] . "', '" . $_POST['total_computer'] . "', '" . $_POST['space_of_computer_center'] . "', '$whatsapp_number', '" . $_POST['contact_number'] . "', '$email_id', '$qualification_of_center_head', 
+			'" . $_POST['staff_room'] . "', '" . $_POST['water_supply'] . "', '" . $_POST['toilet'] . "',
+			 '$reception', '$username', '$password', '', '1', '$img[file_name]','$assistant_manager','$reg_no')";
 
             $data = $con->query($query);
 
@@ -47,16 +58,24 @@ $center_number = 'KICK01' . str_pad($randomNumber, 2, '0', STR_PAD_LEFT);
 <!-- Your HTML form goes here -->
 
 <br>
-<div class="container">
+<div class="">
     
 	<div class="panel panel-info">
 		<div class="panel-heading"><h3>Franchisee Form</h3></div>
 		<div class="panel-body">
 			<form action="" method="post" enctype="multipart/form-data" class="row">
 			    <input type="hidden" name="center_number" value="<? echo $center_number?>">
-				<div class="form-group col-lg-4 col-xs-12 col-sm-12">
-					<label>Institute Owner Name</label>
+				<div class="form-group col-lg-6 col-xs-12 col-sm-12">
+					<label>Branch Head</label>
 					<input type="text" name="name" class="form-control" placeholder="Enter Institute Owner Name" required>
+				</div>
+				<div class="form-group col-lg-6 col-xs-12 col-sm-12">
+					<label>Assistant Manager</label>
+					<input type="text" name="assistant_manager" class="form-control" placeholder="Enter Assistant Manager" required>
+				</div>
+				<div class="form-group col-lg-4 col-xs-12 col-sm-12">
+					<label>Registration Number</label>
+					<input type="text" name="reg_no" class="form-control" placeholder="Enter Reg. No." required>
 				</div>
 				<div class="form-group col-lg-8 col-xs-12 col-sm-12">
 					<label>Institute Name</label>
