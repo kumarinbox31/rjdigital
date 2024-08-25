@@ -1,4 +1,5 @@
 <?php
+   die('Maintenance');
    include 'includes/header.php';
    
    $page_id = isset($_GET['page_id'])?$_GET['page_id']:1;
