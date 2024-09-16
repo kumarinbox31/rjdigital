@@ -71,7 +71,7 @@ if (isset($_POST['student']) && $_POST['student'] == 'insert') {
         $address1 = $_POST['address1'];
     	 $address2 = $_POST['address2'];
      $address3 = $_POST['address3'];
-        $year = $_POST['year'];
+        $year = $_POST['p_year'];
         $course_id = $_POST['course_id'];
         $center_id = $_POST['center_id'];
      
@@ -81,11 +81,13 @@ if (isset($_POST['student']) && $_POST['student'] == 'insert') {
     	$session = $_POST['session'];
         $status = 0;  // Set status value as required
     	$qualification = $_POST['qualification'];
+        $reg_date = date('Y-m-d');
+        
 
         $query = "INSERT INTO students 
-                  (qualification,enrollment_no, name, gender, father, mother, dob, mobile, email, state, distric, address1,address2 ,address3,year, course_id, center_id, photo, status,  is_deleted, categary, sign, thumb, pincode, adhar,session) 
+                  (reg_date,qualification,enrollment_no, name, gender, father, mother, dob, mobile, email, state, distric, address1,address2 ,address3,p_year, course_id, center_id, photo, status,  is_deleted, categary, sign, thumb, pincode, adhar,session) 
                   VALUES 
-                  ('$qualification','$enrollment_no', '$name', '$gender', '$father_name', '$mother_name', '$dob', '$mobile', '$email', '$state_id', '$city_id', '$address1','$address2','$address3', '$year', '$course_id', '$center_id', '$image', '$status',  '0', '$categary', '$sign', '$th', '$pincode', '$aadhar','$session')";
+                  ('$reg_date','$qualification','$enrollment_no', '$name', '$gender', '$father_name', '$mother_name', '$dob', '$mobile', '$email', '$state_id', '$city_id', '$address1','$address2','$address3', '$year', '$course_id', '$center_id', '$image', '$status',  '0', '$categary', '$sign', '$th', '$pincode', '$aadhar','$session')";
 
         if ($con->query($query)) {
             $id = $con->insert_id;
@@ -270,7 +272,7 @@ $new_id_no = $max_id_row['max_id'] + 1;
          </div>
          <div class="form-group col-md-6 col-sm-12">
             <label>Year Of Passing / उत्तीर्ण वर्ष</label>
-            <input type="text" name="year" placeholder="Enter Year Of Passing" class="form-control" required>
+            <input type="text" name="p_year" placeholder="Enter Year Of Passing" class="form-control" required>
          </div>
              <div class="col-md-12"><h5 class="mb-3">7 . Identification details / पहचान विवरण</h5></div>
          <div class="form-group col-md-6 col-sm-12">
