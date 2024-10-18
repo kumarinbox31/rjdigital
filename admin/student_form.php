@@ -8,9 +8,9 @@ if (isset($_POST['student']) && $_POST['student'] == 'insert') {
     $mobile = isset($_POST['mobile_no']) ? $_POST['mobile_no'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
 
-    $result = $con->query("SELECT * FROM students WHERE mobile = '$mobile' AND email = '$email'");
+   //  $result = $con->query("SELECT * FROM students WHERE mobile = '$mobile' AND email = '$email'");
 
-    if ($result->num_rows == 0) {
+   //  if ($result->num_rows == 0) {
         // Handle photo upload
         if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
             $photoTmpPath = $_FILES['photo']['tmp_name'];
@@ -131,9 +131,9 @@ if (isset($_POST['student']) && $_POST['student'] == 'insert') {
         } else {
             echo '<script>alert("Something Went Wrong."); location.href="' . BASE_URL . 'student_form.php"</script>';
         }
-    } else {
-        echo '<script>alert("Student already exists."); location.href="' . BASE_URL . 'student_form.php"</script>';
-    }
+   //  } else {
+   //      echo '<script>alert("Student already exists."); location.href="' . BASE_URL . 'student_form.php"</script>';
+   //  }
 }
 
 $max_id_query = $con->query("SELECT MAX(id) AS max_id FROM students");

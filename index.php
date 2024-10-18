@@ -97,9 +97,27 @@
                            <div class="tab-content">
                               <div class="tab-pane fade in active" id="dlp2017" style="height:415px;">
                                  <marquee behavior="scroll" direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();" style="height:400px;">
-                                    <ul class="lst">
-                                       <!------------  ------------>
-                                    </ul>
+                                 <ul class="lst">
+                                 <?php 
+// Corrected SQL Query
+$centers  = $con->query("SELECT * FROM centers ORDER BY `id` DESC LIMIT 10");
+
+while($center = $centers->fetch_assoc()){
+?>
+<li style="border-bottom: 1px dotted #000;">
+    <center>
+        <img class="alignnone size-full wp-image-4843" 
+             src="/uploads/centers/<?php echo htmlspecialchars($center['image']); ?>" alt="" 
+             style="height:110px;width:120px;">
+        <br/>
+        <strong><?php echo htmlspecialchars($center['institute_name']); ?></strong><br/>
+        <strong><?php echo htmlspecialchars($center['center_full_address']); ?> </strong><br/>
+   </center>
+</li>
+<?php } ?>
+
+        
+                                     </ul>
                                  </marquee>
                               </div>
                            </div>
