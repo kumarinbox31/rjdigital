@@ -111,7 +111,7 @@ while($center = $centers->fetch_assoc()){
              style="height:110px;width:120px;">
         <br/>
         <strong><?php echo htmlspecialchars($center['institute_name']); ?></strong><br/>
-        <strong><?php echo htmlspecialchars($center['center_full_address']); ?> </strong><br/>
+        <!-- <strong><?php echo htmlspecialchars($center['center_full_address']); ?> </strong><br/> -->
    </center>
 </li>
 <?php } ?>

@@ -15,7 +15,7 @@ if($_POST['status']=='get_certificate')
     }
 	$a = $admit->fetch_assoc();
 	$enrollment_no = $a['enrollment_no'];
-	$stu 	= $con->query("SELECT * FROM students where enrollment_no = '".$enrollment_no."' ");
+	$stu 	= $con->query("SELECT * FROM students where enrollment_no = '".$enrollment_no."' and center_id = '".$_SESSION['center']['id']."'");
 	if($stu->num_rows>0 && $admit->num_rows>0)
 	{
 		$s = $stu->fetch_assoc();
@@ -74,7 +74,7 @@ if($_POST['status']=='get_certificate')
 	}
 	else
 	{
-		echo '<script>alert("Enrollment or date of birth not matched.");location.href="get_certificate.php"</script>';
+		echo '<script>alert("Enrollment does not match, or the student is not aligned with your center.");location.href="get_certificate.php"</script>';
 	}
 }
 else
