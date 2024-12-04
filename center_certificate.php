@@ -110,14 +110,15 @@ page[size="A5"][layout="landscape"] {
         
     </style>
     <style>
-    @page {
+    /* @page {
         size: A4;
         margin: 0;
-    }
+    } */
     body {
         margin: 20mm;
     }
 </style>
+
   </head>
         <?
           $logo = $con->query("SELECT * FROM logo_setting where id = 1")->fetch_assoc();
@@ -136,6 +137,7 @@ page[size="A5"][layout="landscape"] {
             .text-wrapper > p{
               font-weight: bold;
               left:17rem;
+              font-size:1rem;
             }
       </style>
       <?php
@@ -153,11 +155,11 @@ page[size="A5"][layout="landscape"] {
                     <p style="top: -20.5rem;"><?=$center_add?></p>
                   
                     <p style="top: -24.5rem;"><?=$center_number?></p>
-                    <p style="top: -16.8rem"><?=$isu_date?></p>
-                    <p style="top: -18.6rem"><?=$center_name?></p>
+                    <p style="top: -16.8rem"><?=date('d-m-Y',strtotime($isu_date));?> To <?=$valid?></p>
+                    <p style="top: -18.6rem">All Computer Course</p>
                     <!-- <p style="top: -11.1rem;left: 13.1rem;"><?=$session?></p> -->
                      <!-- <p style="top: -24.5rem;left: 17rem;">SIHS (An ISO 9001 : 2015 Certified Institute)</p> -->
-                     <p style="top: -10.1rem;left: 13.1rem;"><?=$valid?></p>
+                     <!-- <p style="top: -10.1rem;left: 13.1rem;"></p> -->
                      <p title="aadhar" style="top:-14.7rem"><?php echo $a['aadhar_number']; ?></p>
                      <img style="width: 87px;
     top: -29rem;
